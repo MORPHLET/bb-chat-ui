@@ -194,6 +194,21 @@ GM은 네 조건 규칙을 실제 자손 상태에 따른 컴포저 표식 두 �
 | Desktop 모사·light | ![기준 desktop](images/c1-baseline-desktop-light-workflow-open.png) | ![후보 desktop](images/c1-candidate-desktop-light-workflow-open.png) |
 | Phone 모사·light | ![기준 phone](images/c1-baseline-phone-light-workflow-open.png) | ![후보 phone](images/c1-candidate-phone-light-workflow-open.png) |
 
+### 멘션 전용 GMM의 닫힌 화면 탐색
+
+GMM은 원래 handoff CSS와 반경 처리 본문을 유지하고, 멘션 세 조건만 표식 하나로 바꾼 별도 사본이다. 닫힌 화면의 비점수 네 context에서 실제 주입 CSS와 컴포저별 표식·자손 상태 및 양 대상의 관측 입력을 확인했다. C1/GMM/GM/MH의 실제 주입 :has 개수는 각각 4/1/0/1이었다. 열린 상태 QA와 전체 테스트는 아직 실행을 마치지 않았다.
+
+새 seed와 네 위치 회전을 고정한 시간 탐색은 각 context에서 warmup 2회 뒤 관측 6회를 수행했다. 표식·조회 비용을 포함했고, 16개 context의 검사와 독립 재계산이 통과했다. Agentation 비활성, 서버 상태 일치와 소유 Chrome·실행기 종료도 확인했다.
+
+| 블록 | C1 | GMM | GMM−C1 |
+|---|---:|---:|---:|
+| 1 | 453.55ms | 423.20ms | -30.35ms |
+| 2 | 452.25ms | 395.35ms | -56.90ms |
+| 3 | 418.15ms | 364.00ms | -54.15ms |
+| 4 | 416.15ms | 439.10ms | 22.95ms |
+
+세 블록은 낮았고 한 블록은 높았다. 이 탐색으로 개선의 안정성이나 반감 성공을 판정하지 않으며 현재 제품 변경으로 채택하지 않는다. 함께 비교한 GM은 이미 동기 handoff 차이가 확인된 참고 조건이고 MH는 기능 제거 조건이다. 전체 자료는 같은 두 연구 대상을 다시 사용했으며 O/F 동시 비교가 아니다. GMM의 열린 화면과 callback 전 동기 동작은 미검증으로 남긴다. 다음 작은 진단은 새 observer 대신 CSS 적용 범위를 좁히는 방법을 검토한다. 적용 순서와 scope proximity에 따른 외형 차이도 별도 검사해야 한다.
+
 ## 제품 후보의 판정 원칙
 
 ### 앞선 실험의 실패를 유지한다

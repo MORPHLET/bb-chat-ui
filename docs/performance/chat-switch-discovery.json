@@ -3407,5 +3407,331 @@
         "not proof that attempt-04 failed in the same count branch; cause not isolated"
       ]
     }
+  },
+  "gmmClosedDiscovery": {
+    "sourceSha256": "d2636990c8be5955bf462618645c468c3e1003cf933865d89fbbf6895a684d59",
+    "blocks": [
+      {
+        "block": 1,
+        "order": [
+          "C1",
+          "GMM",
+          "GM",
+          "MH"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              460.5,
+              426.8999999985099,
+              479.8999999985099,
+              522.3999999985099,
+              381.70000000298023,
+              446.6000000014901
+            ],
+            "domMedianMs": 453.55000000074506,
+            "focusMedianMs": 559.5999999977648,
+            "directionMedianMs": {
+              "A": 446.6000000014901,
+              "B": 460.5
+            }
+          },
+          "GMM": {
+            "domValuesMs": [
+              410.6000000014901,
+              459.1000000014901,
+              440.69999999552965,
+              435.79999999701977,
+              362.5,
+              365.8999999985099
+            ],
+            "domMedianMs": 423.19999999925494,
+            "focusMedianMs": 551.3999999985099,
+            "directionMedianMs": {
+              "A": 435.79999999701977,
+              "B": 410.6000000014901
+            }
+          },
+          "GM": {
+            "domValuesMs": [
+              401.6000000014901,
+              471.30000000447035,
+              648,
+              471.5,
+              369.20000000298023,
+              332.8999999985099
+            ],
+            "domMedianMs": 436.45000000298023,
+            "focusMedianMs": 569.4499999992549,
+            "directionMedianMs": {
+              "A": 471.30000000447035,
+              "B": 401.6000000014901
+            }
+          },
+          "MH": {
+            "domValuesMs": [
+              535.8999999985099,
+              413.1000000014901,
+              409.69999999552965,
+              399.1000000014901,
+              451.20000000298023,
+              458.3999999985099
+            ],
+            "domMedianMs": 432.1500000022352,
+            "focusMedianMs": 569.75,
+            "directionMedianMs": {
+              "A": 413.1000000014901,
+              "B": 451.20000000298023
+            }
+          }
+        },
+        "GMMMinusC1Ms": -30.350000001490116,
+        "GMMinusC1Ms": -17.099999997764826,
+        "MHMinusC1Ms": -21.399999998509884
+      },
+      {
+        "block": 2,
+        "order": [
+          "GMM",
+          "GM",
+          "MH",
+          "C1"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              457.19999999552965,
+              423.6000000014901,
+              381.69999999552965,
+              447.29999999701977,
+              493.1000000014901,
+              517.2999999970198
+            ],
+            "domMedianMs": 452.2499999962747,
+            "focusMedianMs": 556.6999999992549,
+            "directionMedianMs": {
+              "A": 447.29999999701977,
+              "B": 457.19999999552965
+            }
+          },
+          "GMM": {
+            "domValuesMs": [
+              414.8999999985099,
+              370.90000000596046,
+              403.80000000447035,
+              540.2000000029802,
+              386.8999999985099,
+              383.8999999985099
+            ],
+            "domMedianMs": 395.3500000014901,
+            "focusMedianMs": 528.1500000022352,
+            "directionMedianMs": {
+              "A": 383.8999999985099,
+              "B": 403.80000000447035
+            }
+          },
+          "GM": {
+            "domValuesMs": [
+              403.20000000298023,
+              491.80000000447035,
+              434.8999999985099,
+              417.29999999701977,
+              360.6000000014901,
+              389
+            ],
+            "domMedianMs": 410.25,
+            "focusMedianMs": 518.4499999992549,
+            "directionMedianMs": {
+              "A": 417.29999999701977,
+              "B": 403.20000000298023
+            }
+          },
+          "MH": {
+            "domValuesMs": [
+              528.5,
+              508.30000000447035,
+              406,
+              462.30000000447035,
+              417.29999999701977,
+              440.80000000447035
+            ],
+            "domMedianMs": 451.55000000447035,
+            "focusMedianMs": 559.8500000052154,
+            "directionMedianMs": {
+              "A": 462.30000000447035,
+              "B": 417.29999999701977
+            }
+          }
+        },
+        "GMMMinusC1Ms": -56.899999994784594,
+        "GMMinusC1Ms": -41.99999999627471,
+        "MHMinusC1Ms": -0.6999999918043613
+      },
+      {
+        "block": 3,
+        "order": [
+          "GM",
+          "MH",
+          "C1",
+          "GMM"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              415.1000000014901,
+              421.19999999552965,
+              469.20000000298023,
+              390.3999999985099,
+              466,
+              377.8999999985099
+            ],
+            "domMedianMs": 418.1499999985099,
+            "focusMedianMs": 500.44999999925494,
+            "directionMedianMs": {
+              "A": 390.3999999985099,
+              "B": 466
+            }
+          },
+          "GMM": {
+            "domValuesMs": [
+              362.70000000298023,
+              342.80000000447035,
+              365.29999999701977,
+              415.1000000014901,
+              354.1000000014901,
+              371.69999999552965
+            ],
+            "domMedianMs": 364,
+            "focusMedianMs": 477.5000000037253,
+            "directionMedianMs": {
+              "A": 371.69999999552965,
+              "B": 362.70000000298023
+            }
+          },
+          "GM": {
+            "domValuesMs": [
+              404.79999999701977,
+              339.69999999552965,
+              393.6000000014901,
+              383.69999999552965,
+              385.90000000596046,
+              341.5
+            ],
+            "domMedianMs": 384.80000000074506,
+            "focusMedianMs": 501.30000000074506,
+            "directionMedianMs": {
+              "A": 341.5,
+              "B": 393.6000000014901
+            }
+          },
+          "MH": {
+            "domValuesMs": [
+              515,
+              492.59999999403954,
+              435.5,
+              393.70000000298023,
+              395.20000000298023,
+              367.6000000014901
+            ],
+            "domMedianMs": 415.3500000014901,
+            "focusMedianMs": 528.5999999977648,
+            "directionMedianMs": {
+              "A": 393.70000000298023,
+              "B": 435.5
+            }
+          }
+        },
+        "GMMMinusC1Ms": -54.149999998509884,
+        "GMMinusC1Ms": -33.349999997764826,
+        "MHMinusC1Ms": -2.7999999970197678
+      },
+      {
+        "block": 4,
+        "order": [
+          "MH",
+          "C1",
+          "GMM",
+          "GM"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              373.90000000596046,
+              517.3000000044703,
+              518.3000000044703,
+              380.3999999985099,
+              392.20000000298023,
+              440.1000000014901
+            ],
+            "domMedianMs": 416.1500000022352,
+            "focusMedianMs": 537.9000000022352,
+            "directionMedianMs": {
+              "A": 440.1000000014901,
+              "B": 392.20000000298023
+            }
+          },
+          "GMM": {
+            "domValuesMs": [
+              505.3999999985099,
+              410.59999999403954,
+              467.6000000014901,
+              528.1999999955297,
+              366.19999999552965,
+              369
+            ],
+            "domMedianMs": 439.0999999977648,
+            "focusMedianMs": 562.6999999992549,
+            "directionMedianMs": {
+              "A": 410.59999999403954,
+              "B": 467.6000000014901
+            }
+          },
+          "GM": {
+            "domValuesMs": [
+              435.8999999985099,
+              401.09999999403954,
+              380.29999999701977,
+              386.6000000014901,
+              401.59999999403954,
+              403.3999999985099
+            ],
+            "domMedianMs": 401.34999999403954,
+            "focusMedianMs": 522.7499999962747,
+            "directionMedianMs": {
+              "A": 401.09999999403954,
+              "B": 401.59999999403954
+            }
+          },
+          "MH": {
+            "domValuesMs": [
+              416.1000000014901,
+              472.6000000014901,
+              509.20000000298023,
+              437.59999999403954,
+              398.5,
+              347.69999999552965
+            ],
+            "domMedianMs": 426.8499999977648,
+            "focusMedianMs": 564.9499999992549,
+            "directionMedianMs": {
+              "A": 437.59999999403954,
+              "B": 416.1000000014901
+            }
+          }
+        },
+        "GMMMinusC1Ms": 22.94999999552965,
+        "GMMinusC1Ms": -14.800000008195639,
+        "MHMinusC1Ms": 10.699999995529652
+      }
+    ],
+    "functionalScope": "closed preflight passed; full suite and open-state QA pending",
+    "adoptionDecision": "not selected after direction changed across exploratory blocks; no product source applied",
+    "limits": [
+      "same research content; not an independent content holdout",
+      "six visits nested in each context; four separate Chrome blocks",
+      "GM reference has an observed synchronous handoff difference; MH removes mention rules",
+      "no concurrent original/front-end-absent comparison; no half-gap inference",
+      "open-state, pre-callback synchronous behavior and first-paint/native integration not established"
+    ]
   }
 }
