@@ -3926,7 +3926,7 @@
     ]
   },
   "selectorStatsProbe": {
-    "status": "no statistics collected; follow-up preparation",
+    "status": "six stopped attempts; no selector statistics collected; no further browser retry in this research pass",
     "purpose": "non-score capture-window totals attributed only to verified static stylesheets",
     "attempts": [
       {
@@ -3994,6 +3994,29 @@
         "snapshotsMatched": true,
         "runtimeCleanupConfirmed": true,
         "cause": "public app-update status GET shape was outside the allowed read contract"
+      },
+      {
+        "attempt": 6,
+        "resultSha256": "24cf2e57feafe5823d4bdd0ac0904639ea182d9471b6ede76d392dcbfc21677b",
+        "status": "unavailable",
+        "failureCode": "read_path",
+        "rejectedRoute": "PLUGIN_INSTALL_JOBS",
+        "rejectionStage": "navigation",
+        "method": "GET",
+        "contextValidated": false,
+        "traceCollected": false,
+        "snapshotsMatched": true,
+        "runtimeCleanupConfirmed": true,
+        "updateFixture": {
+          "kind": "synthetic unsupported/idle; not actual host state",
+          "sha256": "69d6f1f9a63c5d4ae877d37f0184a67bed932b14b82ff54e0cb547a0bac80cc6",
+          "applied": true,
+          "intercepted": 1,
+          "fulfilled": 1,
+          "serverForwarded": 0,
+          "counterScope": "runner boundary only; not independently observed at server"
+        },
+        "cause": "existing plugin-install-job list GET shape was outside the allowed read contract; static handler can prune expired completed entries but does not start jobs"
       }
     ],
     "limits": [
@@ -4001,6 +4024,28 @@
       "instrumentation overhead prevents comparison with earlier uninstrumented switch scores",
       "capture totals do not establish a particular frame, getter or layout cause",
       "original failed results and frozen inputs retained privately; raw user data and trace excluded"
+    ]
+  },
+  "researchDecision": {
+    "halfGapAchieved": false,
+    "confirmationRunExecuted": false,
+    "productChange": "C1 Workflow-only stylesheet lifetime proposal",
+    "validatedProductCommit": "d9af383ab2f571a926e02a22204a0c02c3fc1fa5",
+    "candidateFullSuitePassed": 694,
+    "installedCandidate": false,
+    "mainProductUnchanged": true,
+    "alternativePrototypesIncludedInProduct": false,
+    "selectorStatisticsAvailable": false,
+    "nextWork": [
+      "complete source-defined native bootstrap read contracts and side-effect classifications before another capture",
+      "obtain one bounded non-score stylesheet-attributed selector capture before selecting a smaller CSS candidate",
+      "verify actual controller read/write ordering before changing layout scheduling",
+      "run the unused concurrent original/candidate/front-end-absent confirmation only after functional and exploratory criteria"
+    ],
+    "limits": [
+      "synthetic phone/desktop demos are not installed bundle, first paint, real-device or user visual acceptance evidence",
+      "no independent content holdout",
+      "goal failure is separate from successful candidate tests and cleanup"
     ]
   }
 }

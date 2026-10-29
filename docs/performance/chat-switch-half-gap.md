@@ -237,6 +237,10 @@ SC는 C1의 네 glass 조건 규칙을 원래 위치의 두 @scope 블록으로 
 
 다섯 번째 실행은 앱 업데이트 상태 조회의 공개 GET 형태가 차단되어 중단됐다. trace와 context 검증은 생성되지 않았으며, 서버 전후 snapshot 일치와 소유 프로세스 종료를 확인했다. 이 handler는 조건에 따라 새 업데이트 확인을 시작할 수 있어 단순 캐시 읽기와 구분한다. 실제 다운로드·설치·설정 변경을 허용하는 근거로 사용하지 않는다.
 
+현재 대상 서버의 설치 방식을 확정하지 못해 여섯 번째 실행에서는 업데이트 GET을 서버에 전달하지 않았다. 공개 응답 계약의 합성 `unsupported`·`idle` 고정 응답을 한 번 적용했다. 실행기 경계의 fulfilled 1·serverForwarded 0을 기록했으며 별도의 서버 관측은 아니다. 이 고정 응답은 실제 호스트 상태나 완전한 native 동작의 증거가 아니다.
+
+이 실행도 기존 플러그인 설치 작업 목록 GET 형태가 차단되어 중단됐다. 설치된 서버 코드에서 해당 조회는 새 설치를 시작하지 않지만, 보존 기간이 지난 완료 항목을 메모리 목록에서 정리한다. trace와 context 검증은 없고 서버 snapshot과 프로세스 종료는 확인했다. 여섯 시도 모두 선택자 통계를 얻지 못했으며 이번 연구에서 추가 브라우저 재시도는 하지 않는다. 정상 부팅 조회의 계약을 실제 수집 전에 완성하지 못한 측정 준비의 한계로 기록한다.
+
 ## 제품 후보의 판정 원칙
 
 ### 앞선 실험의 실패를 유지한다
@@ -272,3 +276,13 @@ BB 0.48의 [experimental_composer 공식 계약](https://github.com/get-bb/bb/bl
 | [TheGreenCedar codex-autoresearch](https://github.com/TheGreenCedar/codex-autoresearch/blob/fbc07c5f8ea41cd756e59812d71b5b9948179dc6/README.md) | 목표·지표·수정 범위·잡음·예산 계약과 반복 기록 | 단일 Codex 중심의 대안이다. [runner](https://github.com/TheGreenCedar/codex-autoresearch/blob/fbc07c5f8ea41cd756e59812d71b5b9948179dc6/plugins/codex-autoresearch/lib/runner.ts)에 Windows 처리는 있으나 전체 통합은 미검증이다. |
 
 bb-autoresearch의 [보정](https://github.com/pascal-de-ladurantaye/bb-autoresearch/blob/836fa3446dbd0ab96df8a864ffa52a4638ac8a35/src/calibration.ts)과 [잡음](https://github.com/pascal-de-ladurantaye/bb-autoresearch/blob/836fa3446dbd0ab96df8a864ffa52a4638ac8a35/src/noise.ts), [holdout](https://github.com/pascal-de-ladurantaye/bb-autoresearch/blob/836fa3446dbd0ab96df8a864ffa52a4638ac8a35/src/holdout.ts)은 유용하지만 데이터의 대표성과 평가자 격리를 자동 보장하지 않는다. 세 도구 모두 완성된 bb-chat-ui 브라우저 benchmark를 대신하지 않는다. 한 명령의 고정 workload, 같은 코드 A/A, 기능·회귀 oracle, 외부 수정이 차단된 판정과 미사용 확인 자료가 먼저 필요하다. 이번처럼 측정계와 화면 조건이 계속 보완되는 단계에서는 자동 후보 반복을 시작하지 않는다. 외형·모션·자체 컴포저는 제품 아이디어이며 자동 성능 점수로 채택하지 않는다.
+
+## 현재 판정과 재개 순서
+
+기능을 보존한 후보가 전환 지연의 추가분을 절반 이하로 줄였다는 근거는 얻지 못했다. 제품 변경에는 C1의 Workflow 스타일 수명 관리만 포함했다. C1의 테스트 694개·타입 검사·빌드와 합성 desktop·phone 데모 QA는 통과했지만, 설치된 원본 번들을 교체하지 않았다. 실제 BB 통합과 사용자의 화면 판정은 남아 있다. 다른 실험 변형은 제품 변경에 넣지 않았다.
+
+다음 작업은 부팅 조회의 공개 계약과 부작용 분류를 먼저 완성하는 것이다. 실제 업데이트 상태를 조회하지 못하면 고정 응답의 적용 범위를 수집 전에 선언해야 한다. 이번처럼 수집을 시작한 뒤 누락된 경로를 하나씩 추가하는 반복은 피한다. 안전 검사를 낮추거나 실패 결과를 덮어쓰는 방식으로 수집을 통과시키지 않는다.
+
+그다음 검증된 스타일시트의 비점수 선택자 통계를 한 번 확보해 작은 CSS 적용 범위 후보를 고른다. 현재는 이 통계가 없으므로 특정 규칙이 비싸다는 결론을 내리지 않는다. 비동기 표식 방식은 확인된 동기 동작 차이가 있어 우선 채택하지 않는다. controller 간 쓰기 뒤 읽기 가능성도 실제 순서를 먼저 관찰해야 하며, LoAF의 진입 위치만으로 getter가 원인이라고 정하지 않는다.
+
+기능 보존과 탐색 근거를 충족한 후보에 한해 새로운 원본·프런트엔드 제외 조건을 함께 비교한다. 미사용 8블록 확인은 그 이후 단계이며 현재 실행하지 않았다. 같은 연구 대상을 반복한 결과를 독립 콘텐츠 검증으로 부르지 않는다. 자체 컴포저 교체는 공개 API와 구현 범위를 조사한 대안으로 남기며, 측정 없이 성능 개선 방법으로 채택하지 않는다.
