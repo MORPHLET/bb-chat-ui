@@ -1,5 +1,5 @@
 {
-  "status": "interim_discovery_not_goal_completion",
+  "status": "stopped_at_weekly_usage_threshold_goal_not_achieved",
   "date": "2026-10-29",
   "productBase": "50ba38154180331583eca024aaac0612a1d85a50",
   "bbVersion": "0.48.0",
@@ -4046,6 +4046,23 @@
       "synthetic phone/desktop demos are not installed bundle, first paint, real-device or user visual acceptance evidence",
       "no independent content holdout",
       "goal failure is separate from successful candidate tests and cleanup"
-    ]
+    ],
+    "resumeDraft": "one read-contract addition retained behind unconditional execution block; integration and new slot still required"
+  },
+  "finishedDateKst": "2026-10-30",
+  "termination": {
+    "reason": "weekly usage threshold; user requested stop",
+    "thresholdPercent": 80,
+    "observedPercent": 80,
+    "verifiedAtUtc": "2026-10-29T15:50:58.2879624+00:00",
+    "newExperimentsAllowed": false,
+    "codexDescendantStopResponses": 18,
+    "activeCodexDescendants": 0,
+    "nativeNonRootAgentsActive": 0,
+    "experimentChromeProcesses": 0,
+    "ownedExperimentNodeProcesses": 0,
+    "watcherRetainsStopLatch": true,
+    "halfGapAchieved": false,
+    "completionMeaning": "research stopped at requested quota; performance objective not achieved"
   }
 }
