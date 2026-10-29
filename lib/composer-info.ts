@@ -83,7 +83,7 @@ export function scrollOverflowEdges(metrics: { scrollTop: number; clientHeight: 
 const CARD_ROOT = `[${MARK}-menu], ${DETAIL}`;
 const PILL = `:is([${pillSlot.navigation}], [${MARK}-stack-kind], [${MARK}-all], [${MARK}-bar][${MARK}-layout="dock"] > [${MARK}-jump])`;
 
-export const composerInfoCss = `
+const composerInfoPrefix = `
 ${infoCardCss(CARD_ROOT, "[data-promptbox-shell]")}
 [${MARK}-stack] { --bb-chat-ui-info-max-height:min(50dvh,26rem); --bb-chat-ui-info-face:${LIGHT_GLASS_FACE}; --bb-chat-ui-info-edge:color-mix(in oklab,var(--popover) 35%,transparent); --bb-chat-ui-info-shadow:color-mix(in oklab,var(--ink,var(--foreground)) 22%,transparent); position:relative; display:block !important; overflow:visible !important; }
 .dark [${MARK}-stack] { --bb-chat-ui-info-face:${DARK_GLASS_FACE}; --bb-chat-ui-info-edge:color-mix(in oklab,var(--foreground) 8%,transparent); --bb-chat-ui-info-shadow:color-mix(in oklab,black 60%,transparent); }
@@ -239,7 +239,8 @@ ${WORKFLOW_PHASES} > div > button[aria-expanded] > svg { order:3; margin-left:au
 ${WORKFLOW_PHASES} > div > button[aria-expanded] > span[class~="font-medium"] { flex:1; }
 ${WORKFLOW_PHASES} > div[class~="items-center"] > span[aria-hidden="true"] { display:none; }
 ${WORKFLOW_PHASE_ROW.split(", ").map(selector => `${selector} > span[class~="tabular-nums"]`).join(", ")} { ${cardStyle.secondaryText} }
-${WORKFLOW_PHASES} > div[class~="items-center"] > span[class~="tabular-nums"] { margin-left:auto; white-space:nowrap; }
+${WORKFLOW_PHASES} > div[class~="items-center"] > span[class~="tabular-nums"] { margin-left:auto; white-space:nowrap; }`;
+const composerInfoWorkflowCss = `
 ${WORKFLOW_PHASES} > div > button[aria-expanded][class~="bg-background/70"]::before,
 ${WORKFLOW_PHASES} > div > button[aria-expanded]:has(> [data-icon="CircleCheck"])::before,
 ${WORKFLOW_PHASES} > div[class~="items-center"][class~="bg-background/70"]::before,
@@ -248,7 +249,8 @@ ${WORKFLOW_PHASES} > div > button[aria-expanded] + div[class~="flex-col"] { marg
 ${WORKFLOW_AGENT_ROW} { display:grid; grid-template-columns:14px minmax(0,1fr); column-gap:var(--bb-chat-ui-card-gap); row-gap:2px; }
 ${WORKFLOW_AGENT_ROW} > svg[data-icon-root] { grid-column:1; grid-row:1; align-self:center; }
 ${WORKFLOW_AGENT_ROW} > span[class~="truncate"] { grid-column:2; grid-row:1; font-weight:400; }
-${WORKFLOW_AGENT_ROW} > span[class~="ml-auto"] { grid-column:2; grid-row:2; justify-self:start; max-width:100%; width:100%; margin-left:0; }
+${WORKFLOW_AGENT_ROW} > span[class~="ml-auto"] { grid-column:2; grid-row:2; justify-self:start; max-width:100%; width:100%; margin-left:0; }`;
+const composerInfoSuffix = `
 ${DETAIL} :is([${MARK}-close-heading], [${MARK}-close-heading] button[aria-expanded]):is(:hover, :focus-visible) { background-color:transparent !important; }
 ${DETAIL}[${OPEN}="background"] #thread-background-commands-card-body > div > div > div[class~="px-3"] { width:calc(100% + 2 * var(--bb-chat-ui-card-row-pad)); margin:0 calc(-1 * var(--bb-chat-ui-card-row-pad)); }
 [${MARK}-activity-panel] { display:flex; flex-direction:column; gap:2px; margin:0; padding:0 8px 0 20px; color:var(--subtle-foreground); ${cardStyle.prose} }
@@ -456,6 +458,7 @@ ${STACK}[${MARK}-stack]:not(:has([${SOURCE}])) [${UNIT}][${OPEN}]:not([hidden]) 
 @media (prefers-reduced-motion:reduce) { [${MARK}-stack] :is(${QUESTION}) { animation:none !important; transition:none !important; } }
 @media (prefers-reduced-motion:reduce) { [${MARK}-diff-previous] { display:none; } }
 `;
+export const composerInfoCss = composerInfoPrefix + composerInfoWorkflowCss + composerInfoSuffix;
 
 interface InfoItem { key: InfoKind; node: HTMLElement; trigger: HTMLElement | null; label: string; }
 function kindsOf(node: HTMLElement): InfoKind[] {
@@ -497,8 +500,15 @@ export function injectComposerInfo(document: Document): () => void {
   if (!view) return () => {};
   const style = document.createElement("style");
   style.id = "bb-chat-ui-composer-info";
-  style.textContent = composerInfoCss;
-  document.head.append(style);
+  style.textContent = composerInfoPrefix;
+  const workflowStyle = document.createElement("style");
+  workflowStyle.id = "bb-chat-ui-composer-info-workflow";
+  workflowStyle.textContent = composerInfoWorkflowCss;
+  const tailStyle = document.createElement("style");
+  tailStyle.id = "bb-chat-ui-composer-info-tail";
+  tailStyle.textContent = composerInfoSuffix;
+  document.head.append(style, tailStyle);
+  const workflowOwners = new Set<HTMLElement>();
   const states = new Map<HTMLElement, ReturnType<typeof mount>>();
   let disposed = false;
   let frame = 0;
@@ -1656,6 +1666,7 @@ export function injectComposerInfo(document: Document): () => void {
         number.replaceChildren(current, previous);
       }
     };
+    // Close the current information card and release its workflow stylesheet.
     const close = (restoreFocus = false, force = false) => {
       queueControls.close();
       cancelHover();
@@ -1664,6 +1675,7 @@ export function injectComposerInfo(document: Document): () => void {
       hoverPreview = false;
       const item = items.find(item => item.node === activeNode && item.key === active);
       activeNode?.removeAttribute(OPEN);
+      if (workflowOwners.delete(stack) && workflowOwners.size === 0) workflowStyle.remove();
       parentArm = null;
       if (!editing() && active !== "diff" && item?.trigger?.getAttribute("aria-expanded") === "true") item.trigger.click();
       menu?.remove();
@@ -1712,6 +1724,7 @@ export function injectComposerInfo(document: Document): () => void {
       openDetail(key, trigger, selected, preview);
       syncJump();
     };
+    // Open the selected information card with its styles ready before native layout.
     const openDetail = (key: InfoKind | "all", trigger: HTMLElement, selected?: InfoItem, preview = false) => {
       if (editing() || stack.hasAttribute(`${MARK}-request`)) return;
       if (key !== "all" && !listed.includes(key)) return;
@@ -1810,6 +1823,10 @@ export function injectComposerInfo(document: Document): () => void {
         orb.setAttribute("aria-expanded", "true");
         updateScrollHints();
         return;
+      }
+      if (key === "workflow") {
+        if (workflowOwners.size === 0) tailStyle.before(workflowStyle);
+        workflowOwners.add(stack);
       }
       active = key;
       activeNode = item.node;
@@ -2731,5 +2748,7 @@ export function injectComposerInfo(document: Document): () => void {
     for (const state of states.values()) state.cleanup();
     states.clear();
     style.remove();
+    workflowStyle.remove();
+    tailStyle.remove();
   };
 }
