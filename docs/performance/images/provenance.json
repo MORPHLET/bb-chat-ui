@@ -1,0 +1,50 @@
+{
+  "evidence": "independent QA attempt-08",
+  "captures": [
+    {
+      "file": "images/c1-baseline-desktop-light-workflow-open.png",
+      "sha256": "b633d61671d5385027ced2f18ffa65835fb94444dedf9571e1a83b412ff63742",
+      "commit": "50ba38154180331583eca024aaac0612a1d85a50",
+      "device": "desktop",
+      "theme": "light",
+      "type": "fake-data product-source demo",
+      "installedBundle": false,
+      "realPhone": false
+    },
+    {
+      "file": "images/c1-baseline-phone-light-workflow-open.png",
+      "sha256": "3a6b0c8e4a2583025a2533fa521923d69f79900d5501530f8d3162e68f8a9b57",
+      "commit": "50ba38154180331583eca024aaac0612a1d85a50",
+      "device": "phone",
+      "theme": "light",
+      "type": "fake-data product-source demo",
+      "installedBundle": false,
+      "realPhone": false
+    },
+    {
+      "file": "images/c1-candidate-desktop-light-workflow-open.png",
+      "sha256": "bfa516fa49f919f90fb1cbaf36b8391e0dff4398f8dc2babcf660bdbcd3d31cd",
+      "commit": "d9af383ab2f571a926e02a22204a0c02c3fc1fa5",
+      "device": "desktop",
+      "theme": "light",
+      "type": "fake-data product-source demo",
+      "installedBundle": false,
+      "realPhone": false
+    },
+    {
+      "file": "images/c1-candidate-phone-light-workflow-open.png",
+      "sha256": "c7f9405b1b4a6a2aa1872e0db4743843c20277b73b24abf00192b3aa15a104a0",
+      "commit": "d9af383ab2f571a926e02a22204a0c02c3fc1fa5",
+      "device": "phone",
+      "theme": "light",
+      "type": "fake-data product-source demo",
+      "installedBundle": false,
+      "realPhone": false
+    }
+  ],
+  "limitations": [
+    "not actual BB integration",
+    "first sampled frame is not first paint",
+    "screen acceptance remains with user"
+  ]
+}

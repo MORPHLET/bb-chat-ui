@@ -1,0 +1,1289 @@
+{
+  "status": "interim_discovery_not_goal_completion",
+  "date": "2026-10-29",
+  "productBase": "50ba38154180331583eca024aaac0612a1d85a50",
+  "bbVersion": "0.48.0",
+  "browser": "Chrome 156.0.8078.48 headless",
+  "metric": "actual sidebar click capture to target timeline row DOM visibility and hit-test observation completion; not paint or INP",
+  "globalAgentationEnabled": false,
+  "backendRetained": true,
+  "historicalMidpointMs": 583.3,
+  "baseline": [
+    {
+      "block": 1,
+      "order": [
+        "N",
+        "F",
+        "A2",
+        "A1"
+      ],
+      "A1": 792.5,
+      "A2": 553.8,
+      "N": 236.1,
+      "F": 244.7,
+      "A1MinusA2": 238.7,
+      "originalMeanMinusF": 428.5
+    },
+    {
+      "block": 2,
+      "order": [
+        "F",
+        "A2",
+        "A1",
+        "N"
+      ],
+      "A1": 507.8,
+      "A2": 458.5,
+      "N": 241.2,
+      "F": 234.3,
+      "A1MinusA2": 49.3,
+      "originalMeanMinusF": 248.9
+    },
+    {
+      "block": 3,
+      "order": [
+        "A2",
+        "A1",
+        "N",
+        "F"
+      ],
+      "A1": 539.4,
+      "A2": 473.9,
+      "N": 233.2,
+      "F": 233.8,
+      "A1MinusA2": 65.5,
+      "originalMeanMinusF": 272.8
+    },
+    {
+      "block": 4,
+      "order": [
+        "A1",
+        "N",
+        "F",
+        "A2"
+      ],
+      "A1": 493.2,
+      "A2": 506.6,
+      "N": 229.2,
+      "F": 249.8,
+      "A1MinusA2": -13.4,
+      "originalMeanMinusF": 250.1
+    }
+  ],
+  "baselineSource": {
+    "sourceSha256": "6a3b9ff6a120673c223be3144a4ebf9125d4c1a8004968c1e457809e1be035ed",
+    "blocks": [
+      {
+        "block": 1,
+        "order": [
+          "N",
+          "F",
+          "A2",
+          "A1"
+        ],
+        "contexts": {
+          "N": {
+            "position": 1,
+            "domValuesMs": [
+              236.2,
+              239.8,
+              235.9,
+              217.7,
+              268.3,
+              214.2
+            ],
+            "domMedianMs": 236.1,
+            "directionMedianMs": {
+              "A": 217.7,
+              "B": 236.2
+            },
+            "focusMedianMs": 266.5
+          },
+          "F": {
+            "position": 2,
+            "domValuesMs": [
+              236.5,
+              282.2,
+              187.4,
+              193.9,
+              252.8,
+              256.7
+            ],
+            "domMedianMs": 244.7,
+            "directionMedianMs": {
+              "A": 256.7,
+              "B": 236.5
+            },
+            "focusMedianMs": 282.1
+          },
+          "A2": {
+            "position": 3,
+            "domValuesMs": [
+              447.9,
+              649.9,
+              462.7,
+              556.3,
+              551.3,
+              586.9
+            ],
+            "domMedianMs": 553.8,
+            "directionMedianMs": {
+              "A": 586.9,
+              "B": 462.7
+            },
+            "focusMedianMs": 648
+          },
+          "A1": {
+            "position": 4,
+            "domValuesMs": [
+              937.9,
+              635,
+              525.2,
+              665.2,
+              919.7,
+              1205.3
+            ],
+            "domMedianMs": 792.5,
+            "directionMedianMs": {
+              "A": 665.2,
+              "B": 919.7
+            },
+            "focusMedianMs": 952.3
+          }
+        }
+      },
+      {
+        "block": 2,
+        "order": [
+          "F",
+          "A2",
+          "A1",
+          "N"
+        ],
+        "contexts": {
+          "F": {
+            "position": 1,
+            "domValuesMs": [
+              394.4,
+              254.2,
+              205.9,
+              230.1,
+              231,
+              237.5
+            ],
+            "domMedianMs": 234.3,
+            "directionMedianMs": {
+              "A": 237.5,
+              "B": 231
+            },
+            "focusMedianMs": 289.2
+          },
+          "A2": {
+            "position": 2,
+            "domValuesMs": [
+              442.3,
+              601,
+              453.8,
+              493.3,
+              447,
+              463.2
+            ],
+            "domMedianMs": 458.5,
+            "directionMedianMs": {
+              "A": 493.3,
+              "B": 447
+            },
+            "focusMedianMs": 607.4
+          },
+          "A1": {
+            "position": 3,
+            "domValuesMs": [
+              665.4,
+              562.4,
+              551.5,
+              451.5,
+              446.7,
+              464.1
+            ],
+            "domMedianMs": 507.8,
+            "directionMedianMs": {
+              "A": 464.1,
+              "B": 551.5
+            },
+            "focusMedianMs": 652.8
+          },
+          "N": {
+            "position": 4,
+            "domValuesMs": [
+              253.7,
+              284,
+              219.5,
+              228.7,
+              258.8,
+              226.4
+            ],
+            "domMedianMs": 241.2,
+            "directionMedianMs": {
+              "A": 228.7,
+              "B": 253.7
+            },
+            "focusMedianMs": 295.4
+          }
+        }
+      },
+      {
+        "block": 3,
+        "order": [
+          "A2",
+          "A1",
+          "N",
+          "F"
+        ],
+        "contexts": {
+          "A2": {
+            "position": 1,
+            "domValuesMs": [
+              437.5,
+              469.6,
+              478.2,
+              521,
+              527.1,
+              413.8
+            ],
+            "domMedianMs": 473.9,
+            "directionMedianMs": {
+              "A": 469.6,
+              "B": 478.2
+            },
+            "focusMedianMs": 598.6
+          },
+          "A1": {
+            "position": 2,
+            "domValuesMs": [
+              557.8,
+              687.3,
+              553.6,
+              515.5,
+              462,
+              525.2
+            ],
+            "domMedianMs": 539.4,
+            "directionMedianMs": {
+              "A": 525.2,
+              "B": 553.6
+            },
+            "focusMedianMs": 671.8
+          },
+          "N": {
+            "position": 3,
+            "domValuesMs": [
+              286.8,
+              214.3,
+              236.6,
+              215,
+              235.7,
+              230.8
+            ],
+            "domMedianMs": 233.2,
+            "directionMedianMs": {
+              "A": 215,
+              "B": 236.6
+            },
+            "focusMedianMs": 264.4
+          },
+          "F": {
+            "position": 4,
+            "domValuesMs": [
+              235.9,
+              231.7,
+              226.6,
+              217.4,
+              273.1,
+              235.9
+            ],
+            "domMedianMs": 233.8,
+            "directionMedianMs": {
+              "A": 231.7,
+              "B": 235.9
+            },
+            "focusMedianMs": 289.3
+          }
+        }
+      },
+      {
+        "block": 4,
+        "order": [
+          "A1",
+          "N",
+          "F",
+          "A2"
+        ],
+        "contexts": {
+          "A1": {
+            "position": 1,
+            "domValuesMs": [
+              679.4,
+              489.7,
+              517.6,
+              461.6,
+              496.7,
+              471.3
+            ],
+            "domMedianMs": 493.2,
+            "directionMedianMs": {
+              "A": 471.3,
+              "B": 517.6
+            },
+            "focusMedianMs": 643.7
+          },
+          "N": {
+            "position": 2,
+            "domValuesMs": [
+              226.4,
+              232,
+              253.5,
+              209.7,
+              216.5,
+              240.3
+            ],
+            "domMedianMs": 229.2,
+            "directionMedianMs": {
+              "A": 232,
+              "B": 226.4
+            },
+            "focusMedianMs": 266.6
+          },
+          "F": {
+            "position": 3,
+            "domValuesMs": [
+              256.5,
+              306,
+              200.5,
+              263.8,
+              226.6,
+              243
+            ],
+            "domMedianMs": 249.8,
+            "directionMedianMs": {
+              "A": 263.8,
+              "B": 226.6
+            },
+            "focusMedianMs": 280.3
+          },
+          "A2": {
+            "position": 4,
+            "domValuesMs": [
+              552.5,
+              462.2,
+              451.9,
+              516,
+              567.2,
+              497.2
+            ],
+            "domMedianMs": 506.6,
+            "directionMedianMs": {
+              "A": 497.2,
+              "B": 552.5
+            },
+            "focusMedianMs": 677.8
+          }
+        }
+      }
+    ],
+    "interpretation": "exploratory descriptive data; visits within a context are dependent; not paint or INP"
+  },
+  "sourceSplit": {
+    "sourceSha256": "43b4b7dd48f1b1a97501a3f25a9644f0dd5d9d76d5faf6db0f0cc8c8a6060963",
+    "blocks": [
+      {
+        "block": 1,
+        "order": [
+          "O",
+          "IC",
+          "GC",
+          "IJ",
+          "GJ",
+          "F"
+        ],
+        "contexts": {
+          "O": {
+            "position": 1,
+            "domValuesMs": [
+              519.9,
+              540.4,
+              614.9,
+              493.8
+            ],
+            "domMedianMs": 530.1,
+            "directionMedianMs": {
+              "A": 517.1,
+              "B": 567.4
+            },
+            "focusMedianMs": 686.2
+          },
+          "IC": {
+            "position": 2,
+            "domValuesMs": [
+              440.9,
+              459,
+              507.9,
+              369
+            ],
+            "domMedianMs": 449.9,
+            "directionMedianMs": {
+              "A": 414,
+              "B": 474.4
+            },
+            "focusMedianMs": 564.8
+          },
+          "GC": {
+            "position": 3,
+            "domValuesMs": [
+              451.2,
+              403.2,
+              586.4,
+              578.3
+            ],
+            "domMedianMs": 514.8,
+            "directionMedianMs": {
+              "A": 490.7,
+              "B": 518.8
+            },
+            "focusMedianMs": 607.9
+          },
+          "IJ": {
+            "position": 4,
+            "domValuesMs": [
+              336,
+              294.8,
+              283.4,
+              368.4
+            ],
+            "domMedianMs": 315.4,
+            "directionMedianMs": {
+              "A": 331.6,
+              "B": 309.7
+            },
+            "focusMedianMs": 414.8
+          },
+          "GJ": {
+            "position": 5,
+            "domValuesMs": [
+              434.8,
+              548.2,
+              447.5,
+              421.1
+            ],
+            "domMedianMs": 441.2,
+            "directionMedianMs": {
+              "A": 484.7,
+              "B": 441.2
+            },
+            "focusMedianMs": 568.9
+          },
+          "F": {
+            "position": 6,
+            "domValuesMs": [
+              223.5,
+              185.3,
+              209.3,
+              235.9
+            ],
+            "domMedianMs": 216.4,
+            "directionMedianMs": {
+              "A": 210.6,
+              "B": 216.4
+            },
+            "focusMedianMs": 262.6
+          }
+        }
+      },
+      {
+        "block": 2,
+        "order": [
+          "GC",
+          "IJ",
+          "GJ",
+          "F",
+          "O",
+          "IC"
+        ],
+        "contexts": {
+          "GC": {
+            "position": 1,
+            "domValuesMs": [
+              446.8,
+              446.2,
+              449.7,
+              400.7
+            ],
+            "domMedianMs": 446.5,
+            "directionMedianMs": {
+              "A": 423.4,
+              "B": 448.3
+            },
+            "focusMedianMs": 559.1
+          },
+          "IJ": {
+            "position": 2,
+            "domValuesMs": [
+              423.2,
+              345.5,
+              314.7,
+              325.2
+            ],
+            "domMedianMs": 335.4,
+            "directionMedianMs": {
+              "A": 335.4,
+              "B": 368.9
+            },
+            "focusMedianMs": 427.8
+          },
+          "GJ": {
+            "position": 3,
+            "domValuesMs": [
+              528.5,
+              480.4,
+              462.1,
+              462.7
+            ],
+            "domMedianMs": 471.5,
+            "directionMedianMs": {
+              "A": 471.5,
+              "B": 495.3
+            },
+            "focusMedianMs": 632.5
+          },
+          "F": {
+            "position": 4,
+            "domValuesMs": [
+              286.4,
+              214.1,
+              260.7,
+              233.2
+            ],
+            "domMedianMs": 246.9,
+            "directionMedianMs": {
+              "A": 223.7,
+              "B": 273.6
+            },
+            "focusMedianMs": 277.2
+          },
+          "O": {
+            "position": 5,
+            "domValuesMs": [
+              604.3,
+              447,
+              503.8,
+              566.7
+            ],
+            "domMedianMs": 535.2,
+            "directionMedianMs": {
+              "A": 506.8,
+              "B": 554
+            },
+            "focusMedianMs": 673.7
+          },
+          "IC": {
+            "position": 6,
+            "domValuesMs": [
+              535.7,
+              466.9,
+              397.9,
+              538
+            ],
+            "domMedianMs": 501.3,
+            "directionMedianMs": {
+              "A": 502.4,
+              "B": 466.8
+            },
+            "focusMedianMs": 636.4
+          }
+        }
+      },
+      {
+        "block": 3,
+        "order": [
+          "GJ",
+          "F",
+          "O",
+          "IC",
+          "GC",
+          "IJ"
+        ],
+        "contexts": {
+          "GJ": {
+            "position": 1,
+            "domValuesMs": [
+              395.4,
+              488.4,
+              539.4,
+              388.3
+            ],
+            "domMedianMs": 441.9,
+            "directionMedianMs": {
+              "A": 438.3,
+              "B": 467.4
+            },
+            "focusMedianMs": 587
+          },
+          "F": {
+            "position": 2,
+            "domValuesMs": [
+              270.6,
+              264.5,
+              225.7,
+              241.2
+            ],
+            "domMedianMs": 252.8,
+            "directionMedianMs": {
+              "A": 252.8,
+              "B": 248.2
+            },
+            "focusMedianMs": 316.9
+          },
+          "O": {
+            "position": 3,
+            "domValuesMs": [
+              554.1,
+              482.1,
+              491.7,
+              470.7
+            ],
+            "domMedianMs": 486.9,
+            "directionMedianMs": {
+              "A": 476.4,
+              "B": 522.9
+            },
+            "focusMedianMs": 582.2
+          },
+          "IC": {
+            "position": 4,
+            "domValuesMs": [
+              422.6,
+              363.7,
+              373.3,
+              388.5
+            ],
+            "domMedianMs": 380.9,
+            "directionMedianMs": {
+              "A": 376.1,
+              "B": 397.9
+            },
+            "focusMedianMs": 518.7
+          },
+          "GC": {
+            "position": 5,
+            "domValuesMs": [
+              549.7,
+              452.9,
+              535.1,
+              454.6
+            ],
+            "domMedianMs": 494.8,
+            "directionMedianMs": {
+              "A": 453.8,
+              "B": 542.4
+            },
+            "focusMedianMs": 586.2
+          },
+          "IJ": {
+            "position": 6,
+            "domValuesMs": [
+              430.2,
+              408.5,
+              330.8,
+              266.8
+            ],
+            "domMedianMs": 369.7,
+            "directionMedianMs": {
+              "A": 337.7,
+              "B": 380.5
+            },
+            "focusMedianMs": 463.4
+          }
+        }
+      }
+    ],
+    "interpretation": "exploratory descriptive data; visits within a context are dependent; not paint or INP"
+  },
+  "workflowHasDeletion": {
+    "sourceSha256": "ee52cea4a9c255792087a39d084023540fec73bfa8133338431a94b6122b67c4",
+    "blocks": [
+      {
+        "block": 1,
+        "order": [
+          "O",
+          "F",
+          "H"
+        ],
+        "contexts": {
+          "O": {
+            "position": 1,
+            "domValuesMs": [
+              614.1,
+              494.4,
+              571,
+              457.2,
+              496,
+              1396.2
+            ],
+            "domMedianMs": 533.5,
+            "directionMedianMs": {
+              "A": 494.4,
+              "B": 571
+            },
+            "focusMedianMs": 676.8
+          },
+          "F": {
+            "position": 2,
+            "domValuesMs": [
+              300.4,
+              211.4,
+              238.9,
+              265,
+              281.7,
+              263.7
+            ],
+            "domMedianMs": 264.3,
+            "directionMedianMs": {
+              "A": 263.7,
+              "B": 281.7
+            },
+            "focusMedianMs": 286.9
+          },
+          "H": {
+            "position": 3,
+            "domValuesMs": [
+              413.6,
+              336.8,
+              371.7,
+              415.3,
+              344.6,
+              375.5
+            ],
+            "domMedianMs": 373.6,
+            "directionMedianMs": {
+              "A": 375.5,
+              "B": 371.7
+            },
+            "focusMedianMs": 450.2
+          }
+        }
+      },
+      {
+        "block": 2,
+        "order": [
+          "F",
+          "H",
+          "O"
+        ],
+        "contexts": {
+          "F": {
+            "position": 1,
+            "domValuesMs": [
+              290,
+              279.9,
+              237.2,
+              219.6,
+              216,
+              208.5
+            ],
+            "domMedianMs": 228.4,
+            "directionMedianMs": {
+              "A": 219.6,
+              "B": 237.2
+            },
+            "focusMedianMs": 278
+          },
+          "H": {
+            "position": 2,
+            "domValuesMs": [
+              435.8,
+              349.5,
+              368.9,
+              344.1,
+              299.4,
+              329.4
+            ],
+            "domMedianMs": 346.8,
+            "directionMedianMs": {
+              "A": 344.1,
+              "B": 368.9
+            },
+            "focusMedianMs": 459.3
+          },
+          "O": {
+            "position": 3,
+            "domValuesMs": [
+              543.9,
+              460.2,
+              476.6,
+              403.7,
+              567.4,
+              549.9
+            ],
+            "domMedianMs": 510.3,
+            "directionMedianMs": {
+              "A": 460.2,
+              "B": 543.9
+            },
+            "focusMedianMs": 642.5
+          }
+        }
+      },
+      {
+        "block": 3,
+        "order": [
+          "H",
+          "O",
+          "F"
+        ],
+        "contexts": {
+          "H": {
+            "position": 1,
+            "domValuesMs": [
+              572.6,
+              385.2,
+              412.5,
+              368,
+              419.6,
+              410.2
+            ],
+            "domMedianMs": 411.3,
+            "directionMedianMs": {
+              "A": 385.2,
+              "B": 419.6
+            },
+            "focusMedianMs": 445.5
+          },
+          "O": {
+            "position": 2,
+            "domValuesMs": [
+              779.5,
+              516.6,
+              639.1,
+              542,
+              547.7,
+              512.8
+            ],
+            "domMedianMs": 544.8,
+            "directionMedianMs": {
+              "A": 516.6,
+              "B": 639.1
+            },
+            "focusMedianMs": 644.7
+          },
+          "F": {
+            "position": 3,
+            "domValuesMs": [
+              295.7,
+              216.2,
+              219,
+              223.5,
+              226,
+              223.6
+            ],
+            "domMedianMs": 223.6,
+            "directionMedianMs": {
+              "A": 223.5,
+              "B": 226
+            },
+            "focusMedianMs": 239.2
+          }
+        }
+      }
+    ],
+    "interpretation": "exploratory descriptive data; visits within a context are dependent; not paint or INP"
+  },
+  "candidate": {
+    "commit": "d9af383ab2f571a926e02a22204a0c02c3fc1fa5",
+    "status": "functional_qa_passed_exploratory_proxy_lower_but_above_half_gap_midpoint",
+    "installed": false,
+    "testsPassed": 694,
+    "qaContexts": 8,
+    "qaDeviceModes": [
+      "desktop",
+      "phone_simulation"
+    ],
+    "qaThemeModes": [
+      "light",
+      "dark"
+    ],
+    "preflightVisibleRows": [
+      5,
+      3
+    ],
+    "limitations": [
+      "product-source fake-data demo, not installed bundle execution",
+      "first sampled frame, not first paint",
+      "preflight covers observable displayed subset and fresh contexts, not all renderer inputs or live user drafts"
+    ]
+  },
+  "c1Exploration": {
+    "sourceSha256": "618865b93300b89ee5d2be03b9cc9873297a8cb1a7a8960cf9cd7e797b2c0d7b",
+    "blocks": [
+      {
+        "block": 1,
+        "order": [
+          "O",
+          "F",
+          "C"
+        ],
+        "contexts": {
+          "O": {
+            "domValuesMs": [
+              512.5,
+              476.8999999985099,
+              554.2999999970198,
+              542.7000000029802,
+              415.1000000014901,
+              497.29999999701977
+            ],
+            "domMedianMs": 504.8999999985099,
+            "directionMedianMs": {
+              "A": 497.29999999701977,
+              "B": 512.5
+            },
+            "focusMedianMs": 605.8499999977648
+          },
+          "F": {
+            "domValuesMs": [
+              236.60000000149012,
+              224.39999999850988,
+              256.29999999701977,
+              243,
+              238,
+              219
+            ],
+            "domMedianMs": 237.30000000074506,
+            "directionMedianMs": {
+              "A": 224.39999999850988,
+              "B": 238
+            },
+            "focusMedianMs": 278.8500000014901
+          },
+          "C": {
+            "domValuesMs": [
+              520.7999999970198,
+              384.29999999701977,
+              333.69999999552965,
+              418.6000000014901,
+              391.70000000298023,
+              313.8999999985099
+            ],
+            "domMedianMs": 388,
+            "directionMedianMs": {
+              "A": 384.29999999701977,
+              "B": 391.70000000298023
+            },
+            "focusMedianMs": 475.8999999985099
+          }
+        },
+        "midpointMs": 371.09999999962747,
+        "candidateMinusMidpointMs": 16.90000000037253
+      },
+      {
+        "block": 2,
+        "order": [
+          "F",
+          "C",
+          "O"
+        ],
+        "contexts": {
+          "F": {
+            "domValuesMs": [
+              272,
+              198,
+              286.5,
+              228.5,
+              249.5,
+              263.5
+            ],
+            "domMedianMs": 256.5,
+            "directionMedianMs": {
+              "A": 228.5,
+              "B": 272
+            },
+            "focusMedianMs": 289.94999999925494
+          },
+          "C": {
+            "domValuesMs": [
+              433.40000000596046,
+              324,
+              452,
+              398.1000000014901,
+              407.79999999701977,
+              317.79999999701977
+            ],
+            "domMedianMs": 402.94999999925494,
+            "directionMedianMs": {
+              "A": 324,
+              "B": 433.40000000596046
+            },
+            "focusMedianMs": 472.9000000022352
+          },
+          "O": {
+            "domValuesMs": [
+              515.3999999985099,
+              524.2999999970198,
+              625.8999999985099,
+              482.70000000298023,
+              473.29999999701977,
+              464.80000000447035
+            ],
+            "domMedianMs": 499.05000000074506,
+            "directionMedianMs": {
+              "A": 482.70000000298023,
+              "B": 515.3999999985099
+            },
+            "focusMedianMs": 606.6000000014901
+          }
+        },
+        "midpointMs": 377.77500000037253,
+        "candidateMinusMidpointMs": 25.174999998882413
+      },
+      {
+        "block": 3,
+        "order": [
+          "C",
+          "O",
+          "F"
+        ],
+        "contexts": {
+          "C": {
+            "domValuesMs": [
+              465.3999999985099,
+              379.30000000447035,
+              376.5,
+              424,
+              438.3999999985099,
+              323.3999999985099
+            ],
+            "domMedianMs": 401.6500000022352,
+            "directionMedianMs": {
+              "A": 379.30000000447035,
+              "B": 438.3999999985099
+            },
+            "focusMedianMs": 487.30000000074506
+          },
+          "O": {
+            "domValuesMs": [
+              422.30000000447035,
+              457.30000000447035,
+              486.80000000447035,
+              464.6000000014901,
+              448.1000000014901,
+              543.6000000014901
+            ],
+            "domMedianMs": 460.95000000298023,
+            "directionMedianMs": {
+              "A": 464.6000000014901,
+              "B": 448.1000000014901
+            },
+            "focusMedianMs": 599.1999999992549
+          },
+          "F": {
+            "domValuesMs": [
+              270.6000000014901,
+              206.89999999850988,
+              228.5,
+              222.5,
+              249.30000000447035,
+              213.89999999850988
+            ],
+            "domMedianMs": 225.5,
+            "directionMedianMs": {
+              "A": 213.89999999850988,
+              "B": 249.30000000447035
+            },
+            "focusMedianMs": 264.75
+          }
+        },
+        "midpointMs": 343.2250000014901,
+        "candidateMinusMidpointMs": 58.42500000074506
+      }
+    ],
+    "interpretation": "three-block descriptive exploration only; not final goal confirmation"
+  },
+  "typographyDeletion": {
+    "sourceSha256": "84d491fbf83d2c5aefc315f0dc0ed4a9942c1babd4d98ebba09bef51746bcc8e",
+    "blocks": [
+      {
+        "block": 1,
+        "order": [
+          "C1",
+          "DQ",
+          "DI"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              365.5,
+              388,
+              348.3999999985099,
+              297.29999999701977,
+              387.5,
+              473.70000000298023
+            ],
+            "domMedianMs": 376.5,
+            "directionMedianMs": {
+              "A": 388,
+              "B": 365.5
+            },
+            "focusMedianMs": 446.95000000298023
+          },
+          "DQ": {
+            "domValuesMs": [
+              433.1000000014901,
+              369.6000000014901,
+              354.80000000447035,
+              396.79999999701977,
+              394.5,
+              420.8999999985099
+            ],
+            "domMedianMs": 395.6499999985099,
+            "directionMedianMs": {
+              "A": 396.79999999701977,
+              "B": 394.5
+            },
+            "focusMedianMs": 463.44999999552965
+          },
+          "DI": {
+            "domValuesMs": [
+              447.69999999552965,
+              302.90000000596046,
+              375.29999999701977,
+              457,
+              310.29999999701977,
+              310.20000000298023
+            ],
+            "domMedianMs": 342.79999999701977,
+            "directionMedianMs": {
+              "A": 310.20000000298023,
+              "B": 375.29999999701977
+            },
+            "focusMedianMs": 456.95000000298023
+          }
+        }
+      },
+      {
+        "block": 2,
+        "order": [
+          "DQ",
+          "DI",
+          "C1"
+        ],
+        "conditions": {
+          "DQ": {
+            "domValuesMs": [
+              390.6000000014901,
+              366.80000000447035,
+              376.1000000014901,
+              389.79999999701977,
+              362.09999999403954,
+              345.8999999985099
+            ],
+            "domMedianMs": 371.45000000298023,
+            "directionMedianMs": {
+              "A": 366.80000000447035,
+              "B": 376.1000000014901
+            },
+            "focusMedianMs": 425.69999999925494
+          },
+          "DI": {
+            "domValuesMs": [
+              415.79999999701977,
+              510.1000000014901,
+              422.3999999985099,
+              416.8999999985099,
+              410.3999999985099,
+              410.70000000298023
+            ],
+            "domMedianMs": 416.3499999977648,
+            "directionMedianMs": {
+              "A": 416.8999999985099,
+              "B": 415.79999999701977
+            },
+            "focusMedianMs": 472.44999999925494
+          },
+          "C1": {
+            "domValuesMs": [
+              585.6000000014901,
+              908.5,
+              379.5,
+              481.09999999403954,
+              417.69999999552965,
+              417.70000000298023
+            ],
+            "domMedianMs": 449.3999999985099,
+            "directionMedianMs": {
+              "A": 481.09999999403954,
+              "B": 417.69999999552965
+            },
+            "focusMedianMs": 573.0499999970198
+          }
+        }
+      },
+      {
+        "block": 3,
+        "order": [
+          "DI",
+          "C1",
+          "DQ"
+        ],
+        "conditions": {
+          "DI": {
+            "domValuesMs": [
+              502.8999999985099,
+              399.20000000298023,
+              397.79999999701977,
+              344.8999999985099,
+              398,
+              487.1000000014901
+            ],
+            "domMedianMs": 398.6000000014901,
+            "directionMedianMs": {
+              "A": 399.20000000298023,
+              "B": 398
+            },
+            "focusMedianMs": 489.30000000074506
+          },
+          "C1": {
+            "domValuesMs": [
+              433.79999999701977,
+              380.59999999403954,
+              363,
+              393.09999999403954,
+              482.29999999701977,
+              384.69999999552965
+            ],
+            "domMedianMs": 388.8999999947846,
+            "directionMedianMs": {
+              "A": 384.69999999552965,
+              "B": 433.79999999701977
+            },
+            "focusMedianMs": 492.69999999552965
+          },
+          "DQ": {
+            "domValuesMs": [
+              379,
+              350.20000000298023,
+              371.69999999552965,
+              361,
+              338.79999999701977,
+              320.6000000014901
+            ],
+            "domMedianMs": 355.6000000014901,
+            "directionMedianMs": {
+              "A": 350.20000000298023,
+              "B": 371.69999999552965
+            },
+            "focusMedianMs": 450.6499999985099
+          }
+        }
+      }
+    ],
+    "interpretation": "feature-deletion diagnostic with inconsistent direction across blocks; not shippable or pure selector cost"
+  }
+}
