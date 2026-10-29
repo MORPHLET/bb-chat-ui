@@ -1285,5 +1285,543 @@
       }
     ],
     "interpretation": "feature-deletion diagnostic with inconsistent direction across blocks; not shippable or pure selector cost"
+  },
+  "loafObservation": {
+    "sourceSha256": "b3574671e82aee5540f84774e4559682c776924312e1b9f13638de6a39b6a0b3",
+    "contexts": [
+      {
+        "label": "O",
+        "supported": true,
+        "started": true,
+        "observerDropSupported": true,
+        "observerDropped": 0,
+        "recorderDroppedFrames": 0,
+        "recorderDroppedScripts": 0,
+        "frameCount": 11,
+        "frameDurationsMs": [
+          78,
+          701.8999999985099,
+          76.89999999850988,
+          66.5,
+          539.1999999955297,
+          85,
+          595.2000000029802,
+          75.60000000149012,
+          91.70000000298023,
+          424.5,
+          61.70000000298023
+        ],
+        "scripts": [
+          {
+            "owner": "host",
+            "position": 9191,
+            "count": 5,
+            "durationMs": 1348.1999999806285,
+            "forcedKnown": 5,
+            "forcedMs": 839.5,
+            "sourceKind": null,
+            "sourceLine": null,
+            "sourceColumn": null
+          },
+          {
+            "owner": "bb-chat-ui",
+            "position": 560362,
+            "count": 4,
+            "durationMs": 500.80000000447035,
+            "forcedKnown": 4,
+            "forcedMs": 483.6,
+            "sourceKind": "composer-info",
+            "sourceLine": 2544,
+            "sourceColumn": 11
+          },
+          {
+            "owner": "other-plugin",
+            "position": 519340,
+            "count": 4,
+            "durationMs": 192.50000000745058,
+            "forcedKnown": 4,
+            "forcedMs": 184.40000000000003,
+            "sourceKind": null,
+            "sourceLine": null,
+            "sourceColumn": null
+          },
+          {
+            "owner": "bb-chat-ui",
+            "position": 86797,
+            "count": 4,
+            "durationMs": 63.600000001490116,
+            "forcedKnown": 4,
+            "forcedMs": 60.6,
+            "sourceKind": "composer-glass",
+            "sourceLine": 932,
+            "sourceColumn": 43
+          },
+          {
+            "owner": "bb-chat-ui",
+            "position": 53760,
+            "count": 4,
+            "durationMs": 60.20000000298023,
+            "forcedKnown": 4,
+            "forcedMs": 57.5,
+            "sourceKind": "other-source",
+            "sourceLine": 50,
+            "sourceColumn": 47
+          },
+          {
+            "owner": "host",
+            "position": 380780,
+            "count": 3,
+            "durationMs": 25.99999999254942,
+            "forcedKnown": 3,
+            "forcedMs": 0,
+            "sourceKind": null,
+            "sourceLine": null,
+            "sourceColumn": null
+          },
+          {
+            "owner": "host",
+            "position": 224085,
+            "count": 2,
+            "durationMs": 125,
+            "forcedKnown": 2,
+            "forcedMs": 105.6,
+            "sourceKind": null,
+            "sourceLine": null,
+            "sourceColumn": null
+          }
+        ]
+      },
+      {
+        "label": "C",
+        "supported": true,
+        "started": true,
+        "observerDropSupported": true,
+        "observerDropped": 0,
+        "recorderDroppedFrames": 0,
+        "recorderDroppedScripts": 0,
+        "frameCount": 4,
+        "frameDurationsMs": [
+          286.30000000447035,
+          271.3999999985099,
+          252.89999999850988,
+          283.30000000447035
+        ],
+        "scripts": [
+          {
+            "owner": "host",
+            "position": 9191,
+            "count": 4,
+            "durationMs": 744.7000000104308,
+            "forcedKnown": 4,
+            "forcedMs": 349.3,
+            "sourceKind": null,
+            "sourceLine": null,
+            "sourceColumn": null
+          },
+          {
+            "owner": "bb-chat-ui",
+            "position": 560669,
+            "count": 4,
+            "durationMs": 107.5,
+            "forcedKnown": 4,
+            "forcedMs": 93.30000000000001,
+            "sourceKind": null,
+            "sourceLine": null,
+            "sourceColumn": null
+          },
+          {
+            "owner": "other-plugin",
+            "position": 519340,
+            "count": 4,
+            "durationMs": 53.5,
+            "forcedKnown": 4,
+            "forcedMs": 46.60000000000001,
+            "sourceKind": null,
+            "sourceLine": null,
+            "sourceColumn": null
+          },
+          {
+            "owner": "bb-chat-ui",
+            "position": 86799,
+            "count": 4,
+            "durationMs": 52.5,
+            "forcedKnown": 4,
+            "forcedMs": 50.2,
+            "sourceKind": null,
+            "sourceLine": null,
+            "sourceColumn": null
+          },
+          {
+            "owner": "bb-chat-ui",
+            "position": 53760,
+            "count": 4,
+            "durationMs": 46.099999994039536,
+            "forcedKnown": 4,
+            "forcedMs": 43.7,
+            "sourceKind": null,
+            "sourceLine": null,
+            "sourceColumn": null
+          },
+          {
+            "owner": "host",
+            "position": 380780,
+            "count": 1,
+            "durationMs": 6.299999997019768,
+            "forcedKnown": 1,
+            "forcedMs": 0,
+            "sourceKind": null,
+            "sourceLine": null,
+            "sourceColumn": null
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "One context per condition, four switches; no score or causal conclusion",
+      "Frame and script duration are entire reported intervals, not time exclusively attributable to a switch",
+      "Callback durations can overlap and cannot be treated as net plugin cost",
+      "host denotes same-origin sources outside known plugin asset paths, not necessarily BB application code",
+      "LoAF omits short frames and may omit script attribution; dropped counters are not complete loss detection",
+      "Only the original bundle has a byte-verified reconstructed source map; C1 positions are unmapped",
+      "No URL, function name, message content, DOM, trace body, or user data hash saved"
+    ],
+    "laterCandidateMapping": {
+      "sourceSha256": "87a0277bb595ac936ab79493a97bb461adc4583e227b155a4d73907576060613",
+      "assetSha256": "bda18fbb289ac5d64c06ad2bd2dbf24e112c58faa65d701110bacaa413279440",
+      "mapSha256": "3c1912c7c86859cf2cfbe8c47bea36c54098268e2f2542aefb07ef3b599c67e7",
+      "positions": [
+        {
+          "position": 53760,
+          "occurrences": 4,
+          "sourceFile": "lib/composer-viewport.ts",
+          "sourceLine": 50,
+          "sourceColumn": 47
+        },
+        {
+          "position": 86799,
+          "occurrences": 4,
+          "sourceFile": "lib/composer-glass.ts",
+          "sourceLine": 932,
+          "sourceColumn": 43
+        },
+        {
+          "position": 560669,
+          "occurrences": 4,
+          "sourceFile": "lib/composer-info.ts",
+          "sourceLine": 2561,
+          "sourceColumn": 11
+        }
+      ],
+      "limitations": [
+        "entrypoint attribution only; no getter, invalidator, paint, INP, or speed effect is established",
+        "closest preceding source map segment can apply"
+      ]
+    }
+  },
+  "sourceGlassDeletion": {
+    "sourceSha256": "316fa37412ed1c330c2516e758ce88062afa21185e19fd7e82e427252797b252",
+    "blocks": [
+      {
+        "block": 1,
+        "order": [
+          "C1",
+          "SH",
+          "GR",
+          "PG"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              347.1000000014901,
+              343.69999999552965,
+              340,
+              333.8999999985099,
+              387.70000000298023,
+              375.1000000014901
+            ],
+            "domMedianMs": 345.3999999985099,
+            "directionMedianMs": {
+              "A": 343.69999999552965,
+              "B": 347.1000000014901
+            },
+            "focusMedianMs": 455.75
+          },
+          "SH": {
+            "domValuesMs": [
+              451,
+              328.3999999985099,
+              353.8999999985099,
+              402,
+              365.6000000014901,
+              371.79999999701977
+            ],
+            "domMedianMs": 368.69999999925494,
+            "directionMedianMs": {
+              "A": 371.79999999701977,
+              "B": 365.6000000014901
+            },
+            "focusMedianMs": 464.30000000074506
+          },
+          "GR": {
+            "domValuesMs": [
+              372.5,
+              343,
+              330.70000000298023,
+              407.30000000447035,
+              419.6000000014901,
+              437.3999999985099
+            ],
+            "domMedianMs": 389.9000000022352,
+            "directionMedianMs": {
+              "A": 407.30000000447035,
+              "B": 372.5
+            },
+            "focusMedianMs": 475.75
+          },
+          "PG": {
+            "domValuesMs": [
+              434.5,
+              440.1000000014901,
+              420.5,
+              330.40000000596046,
+              319.6000000014901,
+              321.8999999985099
+            ],
+            "domMedianMs": 375.45000000298023,
+            "directionMedianMs": {
+              "A": 330.40000000596046,
+              "B": 420.5
+            },
+            "focusMedianMs": 466.45000000298023
+          }
+        }
+      },
+      {
+        "block": 2,
+        "order": [
+          "SH",
+          "GR",
+          "PG",
+          "C1"
+        ],
+        "conditions": {
+          "SH": {
+            "domValuesMs": [
+              393.8999999985099,
+              431.19999999552965,
+              371,
+              427.8999999985099,
+              372.20000000298023,
+              312.79999999701977
+            ],
+            "domMedianMs": 383.05000000074506,
+            "directionMedianMs": {
+              "A": 427.8999999985099,
+              "B": 372.20000000298023
+            },
+            "focusMedianMs": 454.9000000022352
+          },
+          "GR": {
+            "domValuesMs": [
+              440.20000000298023,
+              352.5,
+              404.69999999552965,
+              296.59999999403954,
+              381.70000000298023,
+              313.5
+            ],
+            "domMedianMs": 367.1000000014901,
+            "directionMedianMs": {
+              "A": 313.5,
+              "B": 404.69999999552965
+            },
+            "focusMedianMs": 438.3499999977648
+          },
+          "PG": {
+            "domValuesMs": [
+              463.3999999985099,
+              456.79999999701977,
+              319.69999999552965,
+              335,
+              373,
+              359
+            ],
+            "domMedianMs": 366,
+            "directionMedianMs": {
+              "A": 359,
+              "B": 373
+            },
+            "focusMedianMs": 453.0000000037253
+          },
+          "C1": {
+            "domValuesMs": [
+              456.6000000014901,
+              427,
+              430.6000000014901,
+              361.59999999403954,
+              368.1000000014901,
+              362.3999999985099
+            ],
+            "domMedianMs": 397.55000000074506,
+            "directionMedianMs": {
+              "A": 362.3999999985099,
+              "B": 430.6000000014901
+            },
+            "focusMedianMs": 514.3500000014901
+          }
+        }
+      },
+      {
+        "block": 3,
+        "order": [
+          "GR",
+          "PG",
+          "C1",
+          "SH"
+        ],
+        "conditions": {
+          "GR": {
+            "domValuesMs": [
+              411.70000000298023,
+              385.70000000298023,
+              337.3999999985099,
+              355.29999999701977,
+              353.1000000014901,
+              317.40000000596046
+            ],
+            "domMedianMs": 354.19999999925494,
+            "directionMedianMs": {
+              "A": 355.29999999701977,
+              "B": 353.1000000014901
+            },
+            "focusMedianMs": 443.3500000014901
+          },
+          "PG": {
+            "domValuesMs": [
+              487.80000000447035,
+              397.29999999701977,
+              344.8999999985099,
+              300.6000000014901,
+              326.90000000596046,
+              366.80000000447035
+            ],
+            "domMedianMs": 355.8500000014901,
+            "directionMedianMs": {
+              "A": 366.80000000447035,
+              "B": 344.8999999985099
+            },
+            "focusMedianMs": 468.80000000074506
+          },
+          "C1": {
+            "domValuesMs": [
+              460.79999999701977,
+              321.20000000298023,
+              353.69999999552965,
+              357.20000000298023,
+              341.29999999701977,
+              328.79999999701977
+            ],
+            "domMedianMs": 347.4999999962747,
+            "directionMedianMs": {
+              "A": 328.79999999701977,
+              "B": 353.69999999552965
+            },
+            "focusMedianMs": 428.30000000074506
+          },
+          "SH": {
+            "domValuesMs": [
+              401.5,
+              345,
+              391.30000000447035,
+              317.19999999552965,
+              310.3999999985099,
+              414.30000000447035
+            ],
+            "domMedianMs": 368.1500000022352,
+            "directionMedianMs": {
+              "A": 345,
+              "B": 391.30000000447035
+            },
+            "focusMedianMs": 445.30000000074506
+          }
+        }
+      },
+      {
+        "block": 4,
+        "order": [
+          "PG",
+          "C1",
+          "SH",
+          "GR"
+        ],
+        "conditions": {
+          "PG": {
+            "domValuesMs": [
+              372.09999999403954,
+              318.30000000447035,
+              365.20000000298023,
+              389.29999999701977,
+              446.29999999701977,
+              389
+            ],
+            "domMedianMs": 380.54999999701977,
+            "directionMedianMs": {
+              "A": 389,
+              "B": 372.09999999403954
+            },
+            "focusMedianMs": 451.7499999962747
+          },
+          "C1": {
+            "domValuesMs": [
+              415,
+              370.5,
+              409.6000000014901,
+              417.5,
+              437.8999999985099,
+              448.59999999403954
+            ],
+            "domMedianMs": 416.25,
+            "directionMedianMs": {
+              "A": 417.5,
+              "B": 415
+            },
+            "focusMedianMs": 492.5999999977648
+          },
+          "SH": {
+            "domValuesMs": [
+              353,
+              387.69999999552965,
+              373.79999999701977,
+              435.20000000298023,
+              449.3999999985099,
+              341.70000000298023
+            ],
+            "domMedianMs": 380.7499999962747,
+            "directionMedianMs": {
+              "A": 387.69999999552965,
+              "B": 373.79999999701977
+            },
+            "focusMedianMs": 487.55000000074506
+          },
+          "GR": {
+            "domValuesMs": [
+              443.1000000014901,
+              424.69999999552965,
+              367,
+              375.8999999985099,
+              406.29999999701977,
+              315
+            ],
+            "domMedianMs": 391.0999999977648,
+            "directionMedianMs": {
+              "A": 375.8999999985099,
+              "B": 406.29999999701977
+            },
+            "focusMedianMs": 483.79999999701977
+          }
+        }
+      }
+    ],
+    "interpretation": "three independent feature-deletion variants; sign alternates across blocks; no adoption or absence-of-cost conclusion"
   }
 }
