@@ -2684,5 +2684,728 @@
       "installedChromeRevisionVerified": false,
       "claim": "class token and attribute name collected in different has-invalidation sets; not a performance result"
     }
+  },
+  "glassHasCombinationDeletion": {
+    "sourceSha256": "477abcd0188b2e6e2f1abdb3dab245529e079ec117df6ce8962ecec98932ebc8",
+    "blocks": [
+      {
+        "block": 1,
+        "order": [
+          "C1",
+          "HF",
+          "AH",
+          "GS"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              414.19999999552965,
+              406.5,
+              475.5,
+              359.70000000298023,
+              363.70000000298023,
+              349.70000000298023
+            ],
+            "domMedianMs": 385.1000000014901,
+            "focusMedianMs": 512.8500000014901,
+            "directionMedianMs": {
+              "A": 359.70000000298023,
+              "B": 414.19999999552965
+            }
+          },
+          "HF": {
+            "domValuesMs": [
+              391.8999999985099,
+              421.1000000014901,
+              426.5,
+              384.40000000596046,
+              403.69999999552965,
+              403.40000000596046
+            ],
+            "domMedianMs": 403.55000000074506,
+            "focusMedianMs": 538.2000000029802,
+            "directionMedianMs": {
+              "A": 403.40000000596046,
+              "B": 403.69999999552965
+            }
+          },
+          "AH": {
+            "domValuesMs": [
+              535.2000000029802,
+              394.3999999985099,
+              342.19999999552965,
+              347.3999999985099,
+              340.1000000014901,
+              339.09999999403954
+            ],
+            "domMedianMs": 344.79999999701977,
+            "focusMedianMs": 487.79999999701977,
+            "directionMedianMs": {
+              "A": 347.3999999985099,
+              "B": 342.19999999552965
+            }
+          },
+          "GS": {
+            "domValuesMs": [
+              383.1000000014901,
+              326.8999999985099,
+              372.5,
+              338.1000000014901,
+              312.79999999701977,
+              315.79999999701977
+            ],
+            "domMedianMs": 332.5,
+            "focusMedianMs": 436.8499999977648,
+            "directionMedianMs": {
+              "A": 326.8999999985099,
+              "B": 372.5
+            }
+          }
+        },
+        "HFMinusC1Ms": 18.449999999254942,
+        "AHMinusC1Ms": -40.30000000447035,
+        "GSMinusC1Ms": -52.600000001490116
+      },
+      {
+        "block": 2,
+        "order": [
+          "HF",
+          "AH",
+          "GS",
+          "C1"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              414.80000000447035,
+              408.40000000596046,
+              539.6000000014901,
+              349.5,
+              434.5,
+              330
+            ],
+            "domMedianMs": 411.6000000052154,
+            "focusMedianMs": 500.3500000014901,
+            "directionMedianMs": {
+              "A": 349.5,
+              "B": 434.5
+            }
+          },
+          "HF": {
+            "domValuesMs": [
+              348.8999999985099,
+              398.3999999985099,
+              426.69999999552965,
+              359.80000000447035,
+              333.19999999552965,
+              456.70000000298023
+            ],
+            "domMedianMs": 379.1000000014901,
+            "focusMedianMs": 489.3500000014901,
+            "directionMedianMs": {
+              "A": 398.3999999985099,
+              "B": 348.8999999985099
+            }
+          },
+          "AH": {
+            "domValuesMs": [
+              346.79999999701977,
+              447.69999999552965,
+              404.70000000298023,
+              386.79999999701977,
+              492.29999999701977,
+              319.6000000014901
+            ],
+            "domMedianMs": 395.75,
+            "focusMedianMs": 494.75,
+            "directionMedianMs": {
+              "A": 386.79999999701977,
+              "B": 404.70000000298023
+            }
+          },
+          "GS": {
+            "domValuesMs": [
+              365.3999999985099,
+              317,
+              338.3999999985099,
+              397.30000000447035,
+              308.8999999985099,
+              317.40000000596046
+            ],
+            "domMedianMs": 327.9000000022352,
+            "focusMedianMs": 441,
+            "directionMedianMs": {
+              "A": 317.40000000596046,
+              "B": 338.3999999985099
+            }
+          }
+        },
+        "HFMinusC1Ms": -32.50000000372529,
+        "AHMinusC1Ms": -15.850000005215406,
+        "GSMinusC1Ms": -83.70000000298023
+      },
+      {
+        "block": 3,
+        "order": [
+          "AH",
+          "GS",
+          "C1",
+          "HF"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              406,
+              424.69999999552965,
+              364.69999999552965,
+              361,
+              428.3999999985099,
+              429.29999999701977
+            ],
+            "domMedianMs": 415.3499999977648,
+            "focusMedianMs": 504.19999999925494,
+            "directionMedianMs": {
+              "A": 424.69999999552965,
+              "B": 406
+            }
+          },
+          "HF": {
+            "domValuesMs": [
+              367.29999999701977,
+              419.90000000596046,
+              367.6000000014901,
+              364.5,
+              389.5,
+              415.19999999552965
+            ],
+            "domMedianMs": 378.55000000074506,
+            "focusMedianMs": 507.30000000074506,
+            "directionMedianMs": {
+              "A": 415.19999999552965,
+              "B": 367.6000000014901
+            }
+          },
+          "AH": {
+            "domValuesMs": [
+              475.8999999985099,
+              380.8999999985099,
+              383.30000000447035,
+              335.19999999552965,
+              348.3999999985099,
+              327.6000000014901
+            ],
+            "domMedianMs": 364.6499999985099,
+            "focusMedianMs": 487.44999999925494,
+            "directionMedianMs": {
+              "A": 335.19999999552965,
+              "B": 383.30000000447035
+            }
+          },
+          "GS": {
+            "domValuesMs": [
+              382,
+              440.70000000298023,
+              437.8999999985099,
+              320.19999999552965,
+              470.6000000014901,
+              335.1000000014901
+            ],
+            "domMedianMs": 409.94999999925494,
+            "focusMedianMs": 512.4999999962747,
+            "directionMedianMs": {
+              "A": 335.1000000014901,
+              "B": 437.8999999985099
+            }
+          }
+        },
+        "HFMinusC1Ms": -36.79999999701977,
+        "AHMinusC1Ms": -50.69999999925494,
+        "GSMinusC1Ms": -5.399999998509884
+      },
+      {
+        "block": 4,
+        "order": [
+          "GS",
+          "C1",
+          "HF",
+          "AH"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              432.80000000447035,
+              412.90000000596046,
+              387.5,
+              348.59999999403954,
+              592.6999999955297,
+              492.3999999985099
+            ],
+            "domMedianMs": 422.8500000052154,
+            "focusMedianMs": 533.4500000029802,
+            "directionMedianMs": {
+              "A": 412.90000000596046,
+              "B": 432.80000000447035
+            }
+          },
+          "HF": {
+            "domValuesMs": [
+              438,
+              457.70000000298023,
+              363.5,
+              327.20000000298023,
+              350.80000000447035,
+              361.80000000447035
+            ],
+            "domMedianMs": 362.6500000022352,
+            "focusMedianMs": 482.80000000074506,
+            "directionMedianMs": {
+              "A": 361.80000000447035,
+              "B": 363.5
+            }
+          },
+          "AH": {
+            "domValuesMs": [
+              473.5,
+              412.8999999985099,
+              355.1000000014901,
+              407.5,
+              391.79999999701977,
+              360.19999999552965
+            ],
+            "domMedianMs": 399.6499999985099,
+            "focusMedianMs": 521.25,
+            "directionMedianMs": {
+              "A": 407.5,
+              "B": 391.79999999701977
+            }
+          },
+          "GS": {
+            "domValuesMs": [
+              394.6000000014901,
+              392.70000000298023,
+              329,
+              405.1000000014901,
+              311.30000000447035,
+              319.70000000298023
+            ],
+            "domMedianMs": 360.8500000014901,
+            "focusMedianMs": 491.19999999925494,
+            "directionMedianMs": {
+              "A": 392.70000000298023,
+              "B": 329
+            }
+          }
+        },
+        "HFMinusC1Ms": -60.20000000298023,
+        "AHMinusC1Ms": -23.200000006705523,
+        "GSMinusC1Ms": -62.00000000372529
+      }
+    ],
+    "interpretation": "AH and GS lower in four exploratory blocks; HF direction changes. Diagnostic deletion only, no product or half-gap claim",
+    "preflight": {
+      "contexts": 4,
+      "syntheticCases": 16,
+      "hasRuleCounts": {
+        "C1": 4,
+        "HF": 3,
+        "AH": 0,
+        "GS": 4
+      },
+      "menuAndHandoffDomCounts": 0
+    },
+    "limits": [
+      "six visits nested in each context; four separate Chrome blocks",
+      "same research content, not a content holdout",
+      "native open menu/handoff, host CSS equivalence and paint not verified"
+    ]
+  },
+  "gmClosedExploration": {
+    "sourceSha256": "5e939304f47bbbf072856f4e73a8341c2be82eb95bf1197eaa5e640e6ad5b359",
+    "candidate": {
+      "base": "d9af383ab2f571a926e02a22204a0c02c3fc1fa5",
+      "manifestSha256": "e9195d2cdbe1c0f1339b51c2231a0acd68283b0db77e6b6432d21a1f724d2370",
+      "appJsSha256": "84756b56768aba98780339d138aefe6f314292c7065a8633a135e507831b7dd1",
+      "appCssSha256": "bf26fb81381afa72c8c516b2c44b7b34153a66cbf8520a3b211d73ca4277e15d",
+      "glassStyleSha256": "a02be54489d83df71e2f03fba3a4d14b7f1f9721f7307e3a0a0fa4a917c39c4b"
+    },
+    "blocks": [
+      {
+        "block": 1,
+        "order": [
+          "C1",
+          "GM",
+          "AH",
+          "GS"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              488.40000000596046,
+              455.70000000298023,
+              471.3999999985099,
+              458.70000000298023,
+              379.6000000014901,
+              366.29999999701977
+            ],
+            "domMedianMs": 457.20000000298023,
+            "focusMedianMs": 569.3000000044703,
+            "directionMedianMs": {
+              "A": 455.70000000298023,
+              "B": 471.3999999985099
+            }
+          },
+          "GM": {
+            "domValuesMs": [
+              497.30000000447035,
+              398.79999999701977,
+              451.8999999985099,
+              405.30000000447035,
+              361.6000000014901,
+              341.6000000014901
+            ],
+            "domMedianMs": 402.05000000074506,
+            "focusMedianMs": 537.0500000007451,
+            "directionMedianMs": {
+              "A": 398.79999999701977,
+              "B": 451.8999999985099
+            }
+          },
+          "AH": {
+            "domValuesMs": [
+              456.6000000014901,
+              467.59999999403954,
+              395.80000000447035,
+              317.5,
+              361.80000000447035,
+              346.1000000014901
+            ],
+            "domMedianMs": 378.80000000447035,
+            "focusMedianMs": 482.44999999925494,
+            "directionMedianMs": {
+              "A": 346.1000000014901,
+              "B": 395.80000000447035
+            }
+          },
+          "GS": {
+            "domValuesMs": [
+              477.8999999985099,
+              287,
+              346,
+              371,
+              328.8999999985099,
+              332.8999999985099
+            ],
+            "domMedianMs": 339.44999999925494,
+            "focusMedianMs": 464.6000000014901,
+            "directionMedianMs": {
+              "A": 332.8999999985099,
+              "B": 346
+            }
+          }
+        },
+        "GMMinusC1Ms": -55.150000002235174,
+        "AHMinusC1Ms": -78.39999999850988,
+        "GSMinusC1Ms": -117.75000000372529
+      },
+      {
+        "block": 2,
+        "order": [
+          "GM",
+          "AH",
+          "GS",
+          "C1"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              395.20000000298023,
+              403.20000000298023,
+              457.6000000014901,
+              437.3999999985099,
+              454,
+              483.30000000447035
+            ],
+            "domMedianMs": 445.69999999925494,
+            "focusMedianMs": 517.7999999970198,
+            "directionMedianMs": {
+              "A": 437.3999999985099,
+              "B": 454
+            }
+          },
+          "GM": {
+            "domValuesMs": [
+              409.6000000014901,
+              357.19999999552965,
+              348.30000000447035,
+              445.1000000014901,
+              420.5,
+              482.70000000298023
+            ],
+            "domMedianMs": 415.05000000074506,
+            "focusMedianMs": 511.1000000014901,
+            "directionMedianMs": {
+              "A": 445.1000000014901,
+              "B": 409.6000000014901
+            }
+          },
+          "AH": {
+            "domValuesMs": [
+              528.6000000014901,
+              392.69999999552965,
+              393.30000000447035,
+              404.6000000014901,
+              389.1000000014901,
+              320
+            ],
+            "domMedianMs": 393,
+            "focusMedianMs": 462.55000000074506,
+            "directionMedianMs": {
+              "A": 392.69999999552965,
+              "B": 393.30000000447035
+            }
+          },
+          "GS": {
+            "domValuesMs": [
+              455.1000000014901,
+              398.3999999985099,
+              341.8999999985099,
+              402.29999999701977,
+              352.3999999985099,
+              315.09999999403954
+            ],
+            "domMedianMs": 375.3999999985099,
+            "focusMedianMs": 464.25,
+            "directionMedianMs": {
+              "A": 398.3999999985099,
+              "B": 352.3999999985099
+            }
+          }
+        },
+        "GMMinusC1Ms": -30.649999998509884,
+        "AHMinusC1Ms": -52.69999999925494,
+        "GSMinusC1Ms": -70.30000000074506
+      },
+      {
+        "block": 3,
+        "order": [
+          "AH",
+          "GS",
+          "C1",
+          "GM"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              401.5,
+              412.8999999985099,
+              423.70000000298023,
+              406.19999999552965,
+              353.6000000014901,
+              545.8999999985099
+            ],
+            "domMedianMs": 409.54999999701977,
+            "focusMedianMs": 522.3999999985099,
+            "directionMedianMs": {
+              "A": 412.8999999985099,
+              "B": 401.5
+            }
+          },
+          "GM": {
+            "domValuesMs": [
+              426.20000000298023,
+              394.20000000298023,
+              381.79999999701977,
+              400.30000000447035,
+              396.29999999701977,
+              320.3999999985099
+            ],
+            "domMedianMs": 395.25,
+            "focusMedianMs": 506.54999999701977,
+            "directionMedianMs": {
+              "A": 394.20000000298023,
+              "B": 396.29999999701977
+            }
+          },
+          "AH": {
+            "domValuesMs": [
+              465.30000000447035,
+              421.8999999985099,
+              318.90000000596046,
+              395.09999999403954,
+              490.90000000596046,
+              426.3999999985099
+            ],
+            "domMedianMs": 424.1499999985099,
+            "focusMedianMs": 530.6499999985099,
+            "directionMedianMs": {
+              "A": 421.8999999985099,
+              "B": 465.30000000447035
+            }
+          },
+          "GS": {
+            "domValuesMs": [
+              390,
+              405.79999999701977,
+              396.69999999552965,
+              374.3999999985099,
+              447.19999999552965,
+              326.09999999403954
+            ],
+            "domMedianMs": 393.3499999977648,
+            "focusMedianMs": 529.0999999977648,
+            "directionMedianMs": {
+              "A": 374.3999999985099,
+              "B": 396.69999999552965
+            }
+          }
+        },
+        "GMMinusC1Ms": -14.299999997019768,
+        "AHMinusC1Ms": 14.600000001490116,
+        "GSMinusC1Ms": -16.199999999254942
+      },
+      {
+        "block": 4,
+        "order": [
+          "GS",
+          "C1",
+          "GM",
+          "AH"
+        ],
+        "conditions": {
+          "C1": {
+            "domValuesMs": [
+              555.7000000029802,
+              382,
+              391.6000000014901,
+              426.70000000298023,
+              470.20000000298023,
+              406.5
+            ],
+            "domMedianMs": 416.6000000014901,
+            "focusMedianMs": 518.6499999985099,
+            "directionMedianMs": {
+              "A": 406.5,
+              "B": 470.20000000298023
+            }
+          },
+          "GM": {
+            "domValuesMs": [
+              432.79999999701977,
+              336.20000000298023,
+              333.6000000014901,
+              359.40000000596046,
+              361.70000000298023,
+              385.3999999985099
+            ],
+            "domMedianMs": 360.55000000447035,
+            "focusMedianMs": 454.0000000037253,
+            "directionMedianMs": {
+              "A": 359.40000000596046,
+              "B": 361.70000000298023
+            }
+          },
+          "AH": {
+            "domValuesMs": [
+              454,
+              439.6000000014901,
+              449.5,
+              389.8999999985099,
+              374.79999999701977,
+              339
+            ],
+            "domMedianMs": 414.75,
+            "focusMedianMs": 525.9000000022352,
+            "directionMedianMs": {
+              "A": 389.8999999985099,
+              "B": 449.5
+            }
+          },
+          "GS": {
+            "domValuesMs": [
+              368.59999999403954,
+              383.8999999985099,
+              449.30000000447035,
+              347.29999999701977,
+              383.5,
+              407.70000000298023
+            ],
+            "domMedianMs": 383.69999999925494,
+            "focusMedianMs": 467.25,
+            "directionMedianMs": {
+              "A": 383.8999999985099,
+              "B": 383.5
+            }
+          }
+        },
+        "GMMinusC1Ms": -56.04999999701977,
+        "AHMinusC1Ms": -1.8500000014901161,
+        "GSMinusC1Ms": -32.900000002235174
+      }
+    ],
+    "functionalScope": "696 tests and closed preflight passed; open QA stopped at observed synchronous handoff motion-count difference",
+    "interpretation": "GM lower than C1 in all four exploratory blocks including observer and query cost; no concurrent original/front-end-absent comparison, no half-gap or product decision",
+    "knownBehaviorDifference": "markers update after MutationObserver delivery; native synchronous style reads before callback can differ from CSS has",
+    "limits": [
+      "same research content; not a content holdout",
+      "six visits nested in a context; four separate Chrome blocks",
+      "open-state and first-paint/native integration not established"
+    ],
+    "fullSuite": {
+      "sha256": "0e7ba1bc38aead123e03ec0dafd53d2b94cb688879d8a3613242cdd50f33d82b",
+      "exitCode": 0,
+      "summary": {
+        "tests": 696,
+        "suites": 0,
+        "pass": 696,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0,
+        "duration_ms": 286843.6797
+      },
+      "fixedManifestSha256": "e9195d2cdbe1c0f1339b51c2231a0acd68283b0db77e6b6432d21a1f724d2370",
+      "sourceAndBundleUnchanged": true
+    },
+    "adoptionDecision": "held; preserve original handoff behavior in a new mention-only candidate",
+    "handoffControl": {
+      "sourceSha256": "5583a3070b9001756016e2e202b5e33d2687defc12be96655b9d211c806da1f7",
+      "c1c1Passed": true,
+      "motionBranches": [
+        {
+          "pair": "c1-c1",
+          "stage": "sync",
+          "code": "none"
+        },
+        {
+          "pair": "c1-c1",
+          "stage": "callback-after",
+          "code": "none"
+        },
+        {
+          "pair": "c1-c1",
+          "stage": "first-frame",
+          "code": "none"
+        },
+        {
+          "pair": "c1-gm",
+          "stage": "sync",
+          "code": "count",
+          "pane": "A",
+          "c1": 4,
+          "other": 0
+        }
+      ],
+      "cleanup": {
+        "browserClosed": true,
+        "serverClosed": true,
+        "chromePidsGone": true,
+        "chromePidCount": 10
+      },
+      "limits": [
+        "single handoff operation; earlier mention sequence not replayed",
+        "C1/GM callback and frame stages not reached after sync failure",
+        "not proof that attempt-04 failed in the same count branch; cause not isolated"
+      ]
+    }
   }
 }
