@@ -3951,6 +3951,49 @@
         "snapshotCollected": false,
         "runtimeCleanupConfirmed": true,
         "cause": "static asset-path contract mismatch found; actual failing subcondition not retained"
+      },
+      {
+        "attempt": 3,
+        "resultSha256": "fdfbb589437e797f78728704f99cb9bb18a88d6ece53621ca382cd674e356dcc",
+        "status": "unavailable",
+        "failureCode": "read_path",
+        "rejectedRoute": "UNKNOWN",
+        "rejectionStage": "navigation",
+        "method": "GET",
+        "segmentCount": 4,
+        "contextValidated": false,
+        "traceCollected": false,
+        "snapshotsMatched": true,
+        "runtimeCleanupConfirmed": true,
+        "cause": "actual rejected path not retained; no retrospective route identification"
+      },
+      {
+        "attempt": 4,
+        "resultSha256": "a49d87af71c60712024d1ffe31b6adf32084b5fbf1854b9107754bcfa02a4f4e",
+        "status": "unavailable",
+        "failureCode": "read_path",
+        "rejectedRoute": "SERVER_MOVE",
+        "rejectionStage": "navigation",
+        "method": "GET",
+        "contextValidated": false,
+        "traceCollected": false,
+        "snapshotsMatched": true,
+        "runtimeCleanupConfirmed": true,
+        "cause": "known public server-move status GET was outside the allowed read contract; earlier rejected routes remain unknown"
+      },
+      {
+        "attempt": 5,
+        "resultSha256": "817f01b08d9ad82ed4e1ee3fa7c06e5f860f83033a10bd929061069718f23e74",
+        "status": "unavailable",
+        "failureCode": "read_path",
+        "rejectedRoute": "SYSTEM_APP_UPDATE",
+        "rejectionStage": "navigation",
+        "method": "GET",
+        "contextValidated": false,
+        "traceCollected": false,
+        "snapshotsMatched": true,
+        "runtimeCleanupConfirmed": true,
+        "cause": "public app-update status GET shape was outside the allowed read contract"
       }
     ],
     "limits": [
