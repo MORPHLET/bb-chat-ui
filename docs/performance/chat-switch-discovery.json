@@ -3924,5 +3924,40 @@
       "actual open-state, full host-CSS, paint and native integration not established",
       "GS removes frost styling; no concurrent original/front-end-absent half-gap comparison"
     ]
+  },
+  "selectorStatsProbe": {
+    "status": "no statistics collected; follow-up preparation",
+    "purpose": "non-score capture-window totals attributed only to verified static stylesheets",
+    "attempts": [
+      {
+        "attempt": 1,
+        "resultSha256": "9087882eaad5d95de64f48472d14fb88df7b9bf7c1cfc085cca16fe75ec3fe56",
+        "status": "unavailable",
+        "failureCode": "read_path",
+        "contextValidated": false,
+        "traceCollected": false,
+        "runtimeCleanupConfirmed": false,
+        "laterOsAbsenceConfirmed": true,
+        "cause": "actual rejected path was not retained; unknown"
+      },
+      {
+        "attempt": 2,
+        "resultSha256": "5e9d1dec1600eea1f5acbac97775e0086b61f1a8a1ee95f225c4b7cd8474b786",
+        "status": "unavailable",
+        "failureCode": "asset_scope",
+        "stoppedBeforeChrome": true,
+        "contextValidated": false,
+        "traceCollected": false,
+        "snapshotCollected": false,
+        "runtimeCleanupConfirmed": true,
+        "cause": "static asset-path contract mismatch found; actual failing subcondition not retained"
+      }
+    ],
+    "limits": [
+      "no selector statistics or fresh-context Agentation absence evidence from these attempts",
+      "instrumentation overhead prevents comparison with earlier uninstrumented switch scores",
+      "capture totals do not establish a particular frame, getter or layout cause",
+      "original failed results and frozen inputs retained privately; raw user data and trace excluded"
+    ]
   }
 }
