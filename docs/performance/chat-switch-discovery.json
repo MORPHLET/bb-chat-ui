@@ -4077,6 +4077,30 @@
     "halfGapAchievedAtResume": false,
     "childSolModelAllowed": true,
     "priority": "complete bootstrap read contracts and obtain a bounded non-score selector capture before selecting a further product change",
-    "actualNewCaptureCompletedAtStart": false
+    "actualNewCaptureCompletedAtStart": false,
+    "selectorStatsAttempts": [
+      {
+        "attempt": 1,
+        "status": "unavailable",
+        "sourceResultSha256": "9a6c60dfeabf1797904776e5bf1802ae91cc67ead20f03d6a0643dd175f54181",
+        "failureCode": "read_path",
+        "firstRejectedRead": {
+          "route": "UNKNOWN",
+          "reason": "unknown_route",
+          "stage": "navigation",
+          "method": "GET",
+          "segmentCount": 4
+        },
+        "contextGate": false,
+        "traceCaptured": false,
+        "agentationContributionAbsenceVerified": false,
+        "snapshotsValidAndMatched": true,
+        "ownedProcessesEnded": true,
+        "updateFixtureResponses": 1,
+        "updateServerForwardedAtRunnerBoundary": 0,
+        "actualRejectedRouteKnown": false,
+        "originalFailurePreserved": true
+      }
+    ]
   }
 }
