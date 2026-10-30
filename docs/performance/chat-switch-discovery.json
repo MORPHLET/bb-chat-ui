@@ -4210,6 +4210,53 @@
       "openedQa": "blocked",
       "delayAndAssertionsUnchanged": true,
       "excludesWholeSuiteLoadAndPrecedingTestContext": true
+    },
+    "syntheticSelectorSanity": {
+      "scope": "synthetic fixture only; capture aggregate; stylesheet owner only",
+      "firstAttempt": {
+        "status": "unavailable",
+        "sourceResultSha256": "2f70a32c5b60d4fb507cc28c1c5742e30119350e8331c12c36ecd01cb03d3807",
+        "failureCode": "sheet_not_inline",
+        "traceStarted": false,
+        "actualFailureCauseConfirmed": false
+      },
+      "coveragePreparation": {
+        "v2PrelaunchStopped": true,
+        "v21PolicyBlocked": true,
+        "v22GlobalNondeletedListIncludesArchivedHiddenAndCrossProjectDescendants": true,
+        "atomicRosterLock": false
+      },
+      "validatedAttempt": {
+        "status": "available",
+        "sourceResultSha256": "7d9c5042f35713ee62750dec2a162482451bcb6ba81e29defec58a2d5c8606e2",
+        "sourceHandoffSha256": "916d1e8b2c8cb131ef9ce00b5078bd7acc111c54c9231b12bfae0279b861af02",
+        "sourceOsProofSha256": "a65c647e4530af93ad0512a7a4cbf0b652b829ca0c96d44e27023774bfbb6bd6",
+        "executionCount": 1,
+        "traceStarted": true,
+        "traceComplete": true,
+        "selectorEvents": 6,
+        "selectorRows": 42,
+        "observedUniqueRuleCount": 5,
+        "duplicateRowsUnattributed": 6,
+        "ownerChangedRejected": "owner_mutated",
+        "dataLoss": false,
+        "rawTraceStored": false,
+        "cleanupVerified": true,
+        "ownedOsExitVerified": true,
+        "ownedChromeCount": 5,
+        "automaticRetry": false
+      },
+      "postrunWrapper": {
+        "code": "UNRELIABLE_NATIVE_EXIT_CHECK",
+        "rejected": true,
+        "nativeExitValueCaptured": false,
+        "fixedOsProofSuccess": true,
+        "originalResultsModified": false,
+        "osVerificationRerun": false
+      },
+      "actualBbContextVerified": false,
+      "productPerformanceClaim": false,
+      "halfGapClaim": false
     }
   }
 }
