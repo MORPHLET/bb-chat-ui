@@ -4095,12 +4095,57 @@
         "traceCaptured": false,
         "agentationContributionAbsenceVerified": false,
         "snapshotsValidAndMatched": true,
-        "ownedProcessesEnded": true,
+        "ownedChromeEnded": true,
+        "updateFixtureResponses": 1,
+        "updateServerForwardedAtRunnerBoundary": 0,
+        "actualRejectedRouteKnown": false,
+        "originalFailurePreserved": true
+      },
+      {
+        "attempt": 2,
+        "status": "unavailable",
+        "sourceResultSha256": "3c3f7562ed46e7322f0e49f2d9756f984b21ee541b34bbec83a00a1c96d55ff3",
+        "failureCode": "read_path",
+        "firstRejectedRead": {
+          "route": "UNKNOWN",
+          "reason": "unknown_route",
+          "stage": "navigation",
+          "method": "GET",
+          "segmentCount": 4,
+          "sourcePath": {
+            "match": "EXACT_GET",
+            "pathId": "R_5925f8011e305e2d7498",
+            "mount": "PUBLIC_API",
+            "prefixTokenIds": []
+          }
+        },
+        "contextGate": false,
+        "traceCaptured": false,
+        "agentationContributionAbsenceVerified": false,
+        "snapshotsValidAndMatched": true,
+        "ownedChromeEnded": true,
+        "updateFixtureResponses": 1,
+        "updateServerForwardedAtRunnerBoundary": 0,
+        "actualRejectedRouteKnown": true,
+        "originalFailurePreserved": true
+      },
+      {
+        "attempt": 3,
+        "status": "unavailable",
+        "sourceResultSha256": "b710206c43492c04328b356269e2dc37ba6113f12e5abe730c563192947c035c",
+        "failureCode": "read_path",
+        "firstRejectedRead": null,
+        "contextGate": false,
+        "traceCaptured": false,
+        "agentationContributionAbsenceVerified": false,
+        "snapshotsValidAndMatched": true,
+        "ownedChromeEnded": true,
         "updateFixtureResponses": 1,
         "updateServerForwardedAtRunnerBoundary": 0,
         "actualRejectedRouteKnown": false,
         "originalFailurePreserved": true
       }
-    ]
+    ],
+    "selectorStatsStatus": "three_stopped_attempts_no_context_or_trace"
   }
 }
