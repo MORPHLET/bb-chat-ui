@@ -3285,8 +3285,9 @@ test("composer question cards have rounded corners and a gentle entrance without
   }
 });
 
+// Read every connected information stylesheet in its cascade order.
 function glassSource(document: Document): string {
-  return document.getElementById("bb-chat-ui-composer-info")?.textContent ?? "";
+  return Array.from(document.querySelectorAll<HTMLStyleElement>('style[id="bb-chat-ui-composer-info"], style[id="bb-chat-ui-composer-info-workflow"], style[id="bb-chat-ui-composer-info-tail"]')).map(style => style.textContent ?? "").join("");
 }
 
 function glassRule(document: Document, element: Element): CSSStyleRule | undefined {
@@ -6910,5 +6911,69 @@ test("height-only info resize skips pill geometry while open-card hints and widt
     width = 120; deliver(96);
     assert.ok(rectangles > 0 && widths > 0, 'an actual row width change still invalidates pill geometry');
     assert.ok([...stack.querySelectorAll<HTMLElement>('[data-bb-chat-ui-info-trigger]')].some(button => button.hidden), 'the narrower row folds overflowing pills');
+  } finally { stop(); f.dom.window.close(); }
+});
+
+test("workflow CSS follows the life of every open native workflow", async () => {
+  const f = fixture();
+  f.document.body.insertAdjacentHTML("beforeend", '<span hidden data-bb-chat-ui-device="desktop"></span>');
+  const shell = f.document.querySelector<HTMLElement>('[data-promptbox-shell]')!;
+  const secondShell = shell.cloneNode(true) as HTMLElement;
+  shell.parentElement!.append(secondShell);
+  const shells = [shell, secondShell];
+  const nativeChecks: string[] = [];
+  for (const [index, item] of shells.entries()) {
+    const stack = item.querySelector('.grid')!;
+    const card = f.document.createElement('section'); card.setAttribute('aria-label', 'Workflow');
+    card.innerHTML = `<button aria-expanded="false" aria-controls="wf-${index}">Workflow</button><section role="region" id="wf-${index}" hidden><div data-detail-scroll-area>Phase</div></section>`;
+    const toggle = card.querySelector<HTMLButtonElement>('button')!;
+    toggle.addEventListener('click', () => {
+      const style = f.document.querySelector<HTMLStyleElement>('#bb-chat-ui-composer-info-workflow');
+      nativeChecks.push(`${!!style?.isConnected}:${card.getAttribute('data-bb-chat-ui-info-open')}`);
+      const expanded = toggle.getAttribute('aria-expanded') !== 'true';
+      toggle.setAttribute('aria-expanded', String(expanded));
+      card.querySelector<HTMLElement>('[role="region"]')!.hidden = !expanded;
+    });
+    stack.append(card);
+  }
+  await f.tick();
+  const stop = injectComposerInfo(f.document);
+  try {
+    const prefix = f.document.querySelector<HTMLStyleElement>('#bb-chat-ui-composer-info')!;
+    const suffix = f.document.querySelector<HTMLStyleElement>('#bb-chat-ui-composer-info-tail')!;
+    assert.equal(f.document.querySelector('#bb-chat-ui-composer-info-workflow'), null);
+    assert.equal(prefix.nextElementSibling, suffix);
+    const stacks = shells.map(item => item.querySelector<HTMLElement>('.grid')!);
+    // Open one workflow through the product pill.
+    const openWorkflow = (stack: HTMLElement) => stack.querySelector<HTMLButtonElement>('[data-bb-chat-ui-info-trigger="workflow"]')!.click();
+    // Close one workflow through its native-card dismiss button.
+    const closeWorkflow = (stack: HTMLElement) => stack.querySelector<HTMLButtonElement>('[data-bb-chat-ui-info-native-dismiss]')!.click();
+    openWorkflow(stacks[0]);
+    const sheet = f.document.querySelector<HTMLStyleElement>('#bb-chat-ui-composer-info-workflow')!;
+    assert.ok(sheet?.isConnected); assert.equal(nativeChecks[0], 'true:workflow', 'CSS is connected before native click');
+    assert.equal(prefix.nextElementSibling, sheet); assert.equal(sheet.nextElementSibling, suffix);
+    assert.equal(prefix.textContent! + sheet.textContent! + suffix.textContent!, composerInfoCss, 'all rules retain original order and text');
+    openWorkflow(stacks[1]); assert.equal(sheet.isConnected, true);
+    closeWorkflow(stacks[0]); assert.equal(sheet.isConnected, true, 'another stack keeps workflow CSS active');
+    const editor = f.document.createElement('div'); editor.setAttribute('data-queued-message-inline-editor', ''); stacks[1].append(editor);
+    closeWorkflow(stacks[1]); assert.equal(sheet.isConnected, true, 'editing refuses close without deactivating');
+    editor.remove(); closeWorkflow(stacks[1]); assert.equal(sheet.isConnected, false);
+    const hover = stacks[0].querySelector<HTMLElement>('[data-bb-chat-ui-info-trigger="workflow"]')!;
+    pointer(f, "pointerover", hover); await new Promise(resolve => f.dom.window.setTimeout(resolve, 230));
+    assert.equal(sheet.isConnected, true, "hover preview activates workflow CSS");
+    pointer(f, "pointerout", hover, f.document.body); await new Promise(resolve => f.dom.window.setTimeout(resolve, 190));
+    assert.equal(sheet.isConnected, false, "ending the hover preview releases workflow CSS");
+    openWorkflow(stacks[0]); assert.equal(sheet.isConnected, true, 'reopening activates synchronously');
+    shell.remove(); await f.tick(); assert.equal(sheet.isConnected, false, 'removing an open stack releases its CSS');
+    openWorkflow(stacks[1]); assert.equal(sheet.isConnected, true);
+    stop(); assert.equal(f.document.getElementById(sheet.id), null, 'cleanup removes all style nodes');
+    assert.equal(f.document.getElementById(prefix.id), null); assert.equal(f.document.getElementById(suffix.id), null);
+  } finally { stop(); f.dom.window.close(); }
+});
+
+test("closed workflows leave no workflow stylesheet connected", () => {
+  const f = fixture(), stop = injectComposerInfo(f.document);
+  try {
+    assert.equal(f.document.querySelector('#bb-chat-ui-composer-info-workflow'), null, 'closed workflow has no connected rules');
   } finally { stop(); f.dom.window.close(); }
 });
