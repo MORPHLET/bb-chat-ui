@@ -4146,6 +4146,26 @@
         "originalFailurePreserved": true
       }
     ],
-    "selectorStatsStatus": "three_stopped_attempts_no_context_or_trace"
+    "selectorStatsStatus": "three_stopped_attempts_no_context_or_trace",
+    "gmmFullSuite": {
+      "status": "failed",
+      "sourceEvidenceSha256": "ece6e2db21497af33f065ee55fb855fc17e959df635a3fd49013588070769910",
+      "runCount": 1,
+      "exitCode": 1,
+      "tests": 696,
+      "passed": 694,
+      "failed": 2,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "sourceAndTestTreeUnchanged": true,
+      "fixedManifestUnchanged": true,
+      "ownedTestProcessesExited": true,
+      "quotaChecksPassed": true,
+      "failureCause": "unconfirmed",
+      "openedQa": "blocked",
+      "productCandidateAdopted": false,
+      "testsOrProductModifiedAfterFailure": false
+    }
   }
 }
