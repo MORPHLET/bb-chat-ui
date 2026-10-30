@@ -4166,6 +4166,50 @@
       "openedQa": "blocked",
       "productCandidateAdopted": false,
       "testsOrProductModifiedAfterFailure": false
+    },
+    "gmmNarrowControl": {
+      "sourceEvidenceSha256": "fafc16246408307f2c777af33f3d190b5b90ebe81ab0c4fdd4f33a0b52befa97",
+      "order": [
+        "C1",
+        "GMM"
+      ],
+      "runsPerLabel": 1,
+      "results": [
+        {
+          "label": "C1",
+          "selected": 2,
+          "tests": 2,
+          "pass": 2,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0,
+          "nameFilterExcluded": 180,
+          "exitCode": 0,
+          "ownedProcessesExited": true,
+          "inputsUnchanged": true
+        },
+        {
+          "label": "GMM",
+          "selected": 2,
+          "tests": 2,
+          "pass": 2,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0,
+          "nameFilterExcluded": 180,
+          "exitCode": 0,
+          "ownedProcessesExited": true,
+          "inputsUnchanged": true
+        }
+      ],
+      "failureReproducedInThisScope": false,
+      "cause": "unconfirmed",
+      "fullSuiteStatus": "failed",
+      "openedQa": "blocked",
+      "delayAndAssertionsUnchanged": true,
+      "excludesWholeSuiteLoadAndPrecedingTestContext": true
     }
   }
 }
