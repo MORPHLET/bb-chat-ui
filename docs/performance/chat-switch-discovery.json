@@ -4144,9 +4144,42 @@
         "updateServerForwardedAtRunnerBoundary": 0,
         "actualRejectedRouteKnown": false,
         "originalFailurePreserved": true
+      },
+      {
+        "attempt": 4,
+        "status": "unavailable",
+        "sourceResultSha256": "95089665e7e6dd53a313996066663c0a78eb85485a0cda406ebd613834ea7313",
+        "failureCode": "read_path",
+        "firstReadFailureBranch": {
+          "failureCode": "read_path",
+          "branch": "HTTP_NON_API_ALLOW_DENIED"
+        },
+        "firstRejectedRead": {
+          "route": "UNKNOWN",
+          "reason": "unknown_route",
+          "stage": "navigation",
+          "method": "GET",
+          "segmentCount": 1
+        },
+        "stopAndRejectedReadAreIndependentLatches": true,
+        "actualRejectedRouteKnown": false,
+        "contextGate": false,
+        "traceCaptured": false,
+        "agentationContributionAbsenceVerified": false,
+        "snapshotsValidAndMatched": true,
+        "ownedChromeEnded": true,
+        "updateFixtureResponses": 1,
+        "updateServerForwardedAtRunnerBoundary": 0,
+        "sourceOsProofSha256": "4753c5e497c34ff9226f8b1c187a03c4c696808b206566c1f98454a56caf4b7a",
+        "runnerAndOperatorAbsent": true,
+        "ownedDescendantsRemaining": 0,
+        "newChromeIdentitiesRemaining": 0,
+        "existingUserChromeIdentitiesMatched": true,
+        "originalFailurePreserved": true,
+        "automaticRetry": false
       }
     ],
-    "selectorStatsStatus": "three_stopped_attempts_no_context_or_trace",
+    "selectorStatsStatus": "four_stopped_native_attempts_no_context_or_trace",
     "gmmFullSuite": {
       "status": "failed",
       "sourceEvidenceSha256": "ece6e2db21497af33f065ee55fb855fc17e959df635a3fd49013588070769910",
