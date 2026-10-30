@@ -4177,9 +4177,40 @@
         "existingUserChromeIdentitiesMatched": true,
         "originalFailurePreserved": true,
         "automaticRetry": false
+      },
+      {
+        "attempt": 5,
+        "status": "unavailable",
+        "sourceResultSha256": "ad8679a1cb557082cb0fe7e0f2a6138552e5ff9751019d1f8c8f91fcbf447d1c",
+        "failureCode": "console_error",
+        "firstReadFailureBranch": null,
+        "firstRejectedRead": null,
+        "actualFailureCauseKnown": false,
+        "contextGate": false,
+        "traceCaptured": false,
+        "agentationContributionAbsenceVerified": false,
+        "staticAssets": {
+          "approvedAssetEntered": "INDEX_ICON_32",
+          "responseValidationCompleted": false,
+          "hashOrMimeMismatchObserved": false,
+          "consoleCauseAttributed": false,
+          "otherAssetsActuallyVerified": false
+        },
+        "snapshotsValidAndMatched": true,
+        "updateFixtureResponses": 1,
+        "updateServerForwardedAtRunnerBoundary": 0,
+        "runnerReportedOwnedChromeGone": true,
+        "sourceOsProofSha256": "44fe1c3cfe8ede6021e0681e9beacbe3a52cec0d65cf22639684d0a0fcf62757",
+        "independentRunnerAndOperatorAbsent": true,
+        "independentNewChromeIdentitiesRemaining": 0,
+        "existingUserChromeIdentitiesMatched": true,
+        "individualOwnedIdentityPostcheck": false,
+        "ownedIdentitySampleCount": 0,
+        "originalFailurePreserved": true,
+        "automaticRetry": false
       }
     ],
-    "selectorStatsStatus": "four_stopped_native_attempts_no_context_or_trace",
+    "selectorStatsStatus": "five_stopped_native_attempts_no_context_or_trace",
     "gmmFullSuite": {
       "status": "failed",
       "sourceEvidenceSha256": "ece6e2db21497af33f065ee55fb855fc17e959df635a3fd49013588070769910",
@@ -4290,6 +4321,14 @@
       "actualBbContextVerified": false,
       "productPerformanceClaim": false,
       "halfGapClaim": false
+    },
+    "fixtureChangeBeforeAttempt5": {
+      "archivedResearchChildrenNet": 12,
+      "fixedTargetsInitiallyArchivedThenUnarchived": true,
+      "exactMetadataRestorationProven": false,
+      "currentStateRequiresFreshValidation": true,
+      "historicalScoreFixtureNotAssumedIdentical": true,
+      "newPerformanceScoreClaim": false
     }
   }
 }
