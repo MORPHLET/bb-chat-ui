@@ -1,5 +1,5 @@
 {
-  "status": "resumed_research_goal_not_achieved",
+  "status": "stopped_guard_failure_round_02_goal_not_achieved",
   "date": "2026-10-29",
   "productBase": "50ba38154180331583eca024aaac0612a1d85a50",
   "bbVersion": "0.48.0",
@@ -4413,6 +4413,74 @@
       "currentStateRequiresFreshValidation": true,
       "historicalScoreFixtureNotAssumedIdentical": true,
       "newPerformanceScoreClaim": false
+    },
+    "finalDisposition": {
+      "status": "stopped_report_only",
+      "goalAchieved": false,
+      "lastExperimentStopReason": "quota_timestamp_guard",
+      "lastExperimentUsagePercent": 79,
+      "rejectedHeartbeatAgeSeconds": -0.006,
+      "thresholdPercent": 80,
+      "latestObservedUsagePercent": 79,
+      "thresholdReachedDuringReporting": false,
+      "nativeAttemptCountRemains": 7,
+      "allDescendantsIdle": true,
+      "browserSlotReturned": true,
+      "originalFullSuiteFailurePreserved": true,
+      "openQaBlocked": true,
+      "candidateInstalled": false,
+      "mainMerged": false
+    },
+    "consoleDiagnosticFollowup": {
+      "status": "prelaunch_blocked_no_actual_canary",
+      "prelaunchAttempts": 2,
+      "firstPrelaunchCode": "SLOT_FILE_UNAVAILABLE",
+      "finalPrelaunchCode": "ROSTER_CAPTURE",
+      "actualCanaryExecutions": 0,
+      "sourcePrelaunchResultSha256": "dfc8f5405e0b3c58bc570189ebf2e3a81c9d0dab7c06f21902c15ee23d8f0830",
+      "sourceHandoffSha256": "8c8bdcda1d01f1727a8b3da8dd308cc39fad1d4bb0b3191660bc479628da71b9",
+      "rootCauseKnown": false,
+      "rosterCompletionVerified": false,
+      "externalWrapperExitCode": 0,
+      "externalExitIsSuccess": false,
+      "actualConsoleSchemaValidated": false,
+      "textPatternIntegration": "statically_reviewed_not_executed",
+      "newNativeCapture": false
+    },
+    "testBoundaryValidation": {
+      "status": "aborted-unscored-no-assertion-or-mutation-verdict",
+      "sourceStopEvidenceSha256": "1fedc1bc011ced9537d99bb969b6bc942f0d6f945c87bc42e47b0c8d9467e1e7",
+      "testLaunchCount": 1,
+      "launched": [
+        "C1"
+      ],
+      "notLaunched": [
+        "GMM",
+        "WC",
+        "WF"
+      ],
+      "plannedSelectedCasesPerLaunch": 2,
+      "actualTwoCasesCompleted": false,
+      "rawLogSummary": {
+        "skipped": 0,
+        "tests": 1,
+        "fail": 1,
+        "cancelled": 0,
+        "todo": 0,
+        "pass": 0
+      },
+      "rawLogExitCode": 1,
+      "assertionVerdict": null,
+      "mutationDetectionVerdict": null,
+      "retryCount": 0,
+      "failedGuard": {
+        "usagePercent": 79,
+        "heartbeatAgeSeconds": -0.006
+      },
+      "fixedInputsMatched": 1642,
+      "ownedProcessesConfirmedEnded": 3,
+      "originalFullSuiteReplaced": false,
+      "qaUnlocked": false
     }
   }
 }
