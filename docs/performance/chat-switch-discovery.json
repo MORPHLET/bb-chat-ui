@@ -1,5 +1,5 @@
 {
-  "status": "stopped_at_weekly_usage_threshold_goal_not_achieved",
+  "status": "resumed_research_goal_not_achieved",
   "date": "2026-10-29",
   "productBase": "50ba38154180331583eca024aaac0612a1d85a50",
   "bbVersion": "0.48.0",
@@ -4064,5 +4064,19 @@
     "watcherRetainsStopLatch": true,
     "halfGapAchieved": false,
     "completionMeaning": "research stopped at requested quota; performance objective not achieved"
+  },
+  "historicalTerminationFieldsReferToRound": 1,
+  "resumption": {
+    "round": 2,
+    "startedAtUtc": "2026-10-30T00:17:22.9847143+00:00",
+    "reason": "explicit user resumption after user-reported doubled weekly allowance",
+    "startUsagePercent": 40,
+    "stopThresholdPercent": 80,
+    "previousStopRecordsPreserved": true,
+    "watcherFreshAndAllowingWork": true,
+    "halfGapAchievedAtResume": false,
+    "childSolModelAllowed": true,
+    "priority": "complete bootstrap read contracts and obtain a bounded non-score selector capture before selecting a further product change",
+    "actualNewCaptureCompletedAtStart": false
   }
 }
